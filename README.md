@@ -1,0 +1,2 @@
+# grav-theme-hola
+Hola is a modern and stylish vCard website template. Designed to be a resume, vCard, portfolio template, it’s the perfect template for creative designers, developers, freelancers, photographer or any creative profession. It is fully responsive and retina/hi-dpi ready. It will look great on any devices from desktop to mobile phones. It has blog page templates, working contact form, stylish portfolio section and other features you will only find on premium templates. Built with clean and organized code, this template is also very easy to customize.
