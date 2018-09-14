@@ -1,0 +1,44 @@
+ <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{ url('theme://images/hero-bg.jpg') }}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>{{ page.title }}</h3>
+
+                <h1>
+                    {{ content }}
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="{{ page.header.button1Link }}" class="smoothscroll btn btn--stroke">
+                        {{ page.header.button1Text }}
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Me
+                    </a>
+                </div>
+
+                <div class="home-content__scroll">
+                    <a href="{{ page.header.button2Link }}" class="scroll-link smoothscroll">
+                        <span>{{ page.header.button2Text }}</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-social">
+        {% for icon in page.header.social %}
+            <li>
+                <a href="{{ icon.socialIconLink }}"><i class="{{ icon.socialIconClass }}" aria-hidden="true"></i><span>{{ icon.socialIconText }}</span></a>
+            </li>
+        {% endfor %}            
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->

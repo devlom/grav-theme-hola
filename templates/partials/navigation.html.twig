@@ -1,9 +1,9 @@
 {% macro nav_loop(page) %}
     {% for p in page.children.visible %}
-        {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
+        {% set active_page = (p.active or p.activeChild) ? 'current' : '' %}
         {% if p.children.visible.count > 0 %}
             <li>
-                <a href="{{ p.url }}" class="{{ active_page }}">
+                <a href="{{ p.url }}" class="smoothscroll {{ active_page }}">
                     {{ p.menu }}
                 </a>
                 <ul>
@@ -12,7 +12,7 @@
             </li>
         {% else %}
             <li>
-                <a href="{{ p.url }}" class="{{ active_page }}">
+                <a href="{{ p.url }}" class="smoothscroll {{ active_page }}">
                     {{ p.menu }}
                 </a>
             </li>
@@ -20,7 +20,7 @@
     {% endfor %}
 {% endmacro %}
 
-<ul {{ tree ? 'class="tree"' : '' }}>
+<ul class="header-nav" {{ tree ? 'class="tree"' : '' }}>
     {{ _self.nav_loop(pages) }}
 </ul>
 

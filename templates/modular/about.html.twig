@@ -1,0 +1,106 @@
+<section id="about" class="s-about target-section">
+
+    <div class="row narrow section-intro has-bottom-sep">
+        <div class="col-full text-center">
+            <h3>{{ page.header.smallTitle }}</h3>
+            <h1>{{ page.title}}</h1>
+            <p class="lead">{{ page.content }}</p>
+        </div>
+    </div>
+
+    <div class="row about-content">
+
+        <div class="col-six tab-full left">
+            <h3>{{ page.header.bioTitle }}</h3>
+
+            <p>{{ page.header.bioDescription|markdown }}
+            </p>
+        </div>
+
+        <div class="col-six tab-full right">
+            <h3>{{ page.header.skillsTitle }}</h3>
+
+            <ul class="skill-bars">
+                {% for item in page.header.skills %}
+
+                    <li>
+                        <div class="progress" style="width: {{ item.percentValue }}">
+                            <span>{{ item.percentValue }}</span></div>
+                        <strong>{{ item.skillName }}</strong>
+                    </li>
+
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+    <!-- end about-content -->
+
+    <div class="row about-content about-content--buttons">
+
+        <div class="col-six tab-full left">
+            <a href="{{ page.header.button1Link }}" class="btn btn--primary full-width">{{ page.header.button1Text }}</a>
+        </div>
+        <div class="col-six tab-full right">
+            <a href="{{ page.header.button1Link }}" class="btn full-width">{{ page.header.button1Text }}</a>
+        </div>
+
+    </div>
+    <!-- end about-content buttons -->
+
+    <div class="row about-content about-content--timeline">
+
+        <div class="col-full text-center">
+            <h3>{{ page.header.expTitle }}</h3>
+        </div>
+        {% for item in page.header.experienceTimeline %}
+            {% if item is odd %}
+                <div class="col-six tab-full left">
+                    <div class="timeline">
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">{{ item.date }}</p>
+                                <h3>{{ item.client }}</h3>
+                                <h5>{{ item.position }}</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <p>{{ item.description }}</p>
+                            </div>
+                        </div>
+                        <!-- end timeline__block -->
+
+                    </div>
+                    <!-- end timeline -->
+                </div>
+                <!-- end left -->
+            {% endif %}
+            {% if item is even %}
+                <div class="col-six tab-full right">
+                    <div class="timeline">
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">{{ item.date }}</p>
+                                <h3>{{ item.client }}</h3>
+                                <h5>{{ item.position }}</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                <p>{{ item.description }}</p>
+                            </div>
+                        </div>
+                        <!-- end timeline__block -->
+
+                    </div>
+                    <!-- end timeline -->
+                </div>
+                <!-- end right -->
+            {% endif %}
+        {% endfor %}
+    </div>
+    <!-- end about-content timeline -->
+
+</section>
+<!-- end about -->

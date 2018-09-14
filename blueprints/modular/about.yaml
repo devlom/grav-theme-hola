@@ -1,0 +1,100 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.smallTitle:
+              type: text
+              autofocus: true
+              style: vertical
+              label: Small Upper Title
+
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+                leftText:
+                  type: section
+                  title: Biography
+                  underline: true
+                  fields:
+                    header.bioTitle:
+                      type: text
+                      label: Biography Title
+                    
+                    header.bioDescription:
+                      type: textarea
+                      label: Biography Text
+                rightSkills:
+                  type: section
+                  title: Skills
+                  underline: true
+                  fields:
+                    header.skillsTitle:
+                      type: text
+                      style: vertical
+                      label: Skills Title
+                    header.skills:
+                      type: list
+                      label: Skills
+                      style: vertical
+                      fields:
+                        .skillName:
+                          type: text
+                          label: Skill Name
+                        .percentValue:
+                          type: text
+                          label: Skill Progress Percentage
+                    header.button1Text:
+                      type: text
+                      label: First Button Text
+                    
+                    header.button1Link:
+                      type: text
+                      label: First Button Link
+
+                    header.button2Text:
+                      type: text
+                      label: Second Button Text
+
+                    header.button2Link:
+                      type: text
+                      label: Second Button Text
+                experience:
+                  type: section
+                  title: Experience
+                  underline: true
+                  fields:
+                    header.expTitle:
+                      type: text
+                      style: vertical
+                      label: Experience Title
+                    header.experienceTimeline:
+                      type: list
+                      label: Skills
+                      style: vertical
+                      fields:
+                        .date:
+                          type: text
+                          label: Job Date
+                        .client:
+                          type: text
+                          label: Client Name
+                        .position:
+                          type: text
+                          label: Job Position 
+                        .description:
+                          type: textarea
+                          label: Jobe Description
+

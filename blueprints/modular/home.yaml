@@ -1,0 +1,52 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+
+            header.button1Text:
+              type: text
+              label: First Button Text
+            
+            header.button1Link:
+              type: text
+              label: First Button Link
+
+            header.button2Text:
+              type: text
+              label: Second Button Text
+
+            header.button2Link:
+              type: text
+              label: Second Button Text
+            
+            social:
+              type: section
+              title: Social Icons
+              text: Enter Banner Social Icons
+              underline: true
+              fields:
+                header.social:
+                  type: list
+                  label: Social icons 
+                  style: vertical
+                  fields:
+                    .socialIconClass:
+                      type: text
+                      label: Insert class Icons
+                    .socialIconText:
+                      type: text
+                      label: Enter Icon Name
+                    .socialIconLink:
+                      type: text
+                      label: Enter Social Icon Link
+              
+            
+            
