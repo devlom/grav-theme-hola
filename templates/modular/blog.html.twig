@@ -1,0 +1,44 @@
+<!-- blog
+    ================================================== -->
+    <section id="blog" class="s-blog target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h3>{{ page.header.smallTitle }}</h3>
+                <h1>{{ page.title }}</h1>
+                <p  class="lead">{{ page.content }}</p>
+            </div>
+        </div>
+
+        <div class="row blog-content">
+            <div class="col-full">
+
+                <div class="blog-list block-1-2 block-tab-full">
+                {% for item in page.header.blog %}
+
+                
+                    <article class="col-block">
+                                
+                        <div class="blog-date">
+                            <a href="{{ item.link }}">{{ item.date }}</a>
+                        </div>  
+                        
+                        <h2 class="h01"><a href="{{ item.link }}">{{ item.title }}</a></h2>
+                        <p>
+                        {{ item.description }}
+                        </p>
+
+                        <div class="blog-cat">
+                                <a href="{{ item.categoryLink }}">{{ item.postCategory }}</a>
+                        </div>
+
+                        
+                    </article>
+
+                    {% endfor %}
+                </div> <!-- end blog-list -->
+
+            </div> <!-- end col-full -->
+        </div> <!-- end blog-content -->
+
+    </section> <!-- end s-blog -->

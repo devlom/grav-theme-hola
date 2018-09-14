@@ -1,0 +1,56 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.smallTitle:
+              type: text
+              autofocus: true
+              style: vertical
+              label: Small Upper Title
+
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+            portfolioSection:
+              type: section
+              title: Blog Section
+              underline: true
+              fields:
+                header.blog:
+                  type: list
+                  label: Blog Posts
+                  style: vertical
+                  fields:
+                    .date:
+                      type: text
+                      label: Post Date
+                    .title:
+                      type: text
+                      label: Post Title
+                    .description:
+                      type: textarea
+                      label: Post Description
+                    .link:
+                      type: text
+                      label: Post URL
+                    .postCategory:
+                      type: selectize
+                      label: Post Category
+                      validate:
+                        type: text
+                    .categoryLink:
+                      type: text
+                      label: Category Button Link
