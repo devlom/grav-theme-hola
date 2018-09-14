@@ -1,0 +1,43 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+            portfolioSection:
+              type: section
+              title: Testimonials
+              underline: true
+              fields:
+                header.testimonials:
+                  type: list
+                  label: Testimonials
+                  fields:
+                    .image:
+                      type: filepicker
+                      folder: '@self'
+                      label: Select Client Photo
+                      preview_images: true
+                      accept:
+                        - .png
+                        - .jpg
+                    .clientName:
+                      type: text
+                      label: Client Name
+                    .position:
+                      type: text
+                      label: Client Company Position
+                    .description:
+                      type: textarea
+                      label: Testimonial Content
+                  
