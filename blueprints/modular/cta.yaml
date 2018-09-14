@@ -1,0 +1,24 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+            header.titleLink:
+              type: text
+              label: Title Link
+
+            header.buttonText:
+              type: text
+              label: Button Text
+            
+            header.buttonLink:
+              type: text
+              label: Button Link
+            

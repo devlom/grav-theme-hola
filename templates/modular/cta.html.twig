@@ -1,0 +1,21 @@
+    <section class="s-cta">
+        
+        <div class="row narrow cta">
+
+            <div class="col-full cta__content">
+
+                <h2 class="h01"><a href="{{ page.header.titleLink }}">{{ page.title }}</a></h2>
+
+                <p class="lead">
+                {{ content|striptags('<a><span>') }}
+                </p>
+
+                <div class="cta__action">
+                    <a class="btn btn--primary btn--large" href="{{ page.header.buttonLink }}">{{ page.header.buttonText }}</a>
+                </div>	
+
+            </div>
+
+        </div> <!-- end cta -->
+        
+    </section>
