@@ -1,0 +1,42 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:            
+            stats:
+              type: section
+              title: Statystic section
+              text: Enter Statystic Elements
+              underline: true
+              fields:
+                header.stats:
+                  type: list
+                  label: Statystics 
+                  style: vertical
+                  fields:
+                    .statCount:
+                      type: text
+                      label: Enter Statistic Number
+                    .statDescription:
+                      type: text
+                      label: Enter Statistic Description
+                    .statIconClass:
+                      type: text
+                      label: Statistic Custom Icon
+                    .statHighlight:
+                      type: toggle
+                      highlight: 1
+                      default: 0
+                      options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+              
+            
+            
