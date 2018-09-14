@@ -1,0 +1,72 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.smallTitle:
+              type: text
+              autofocus: true
+              style: vertical
+              label: Small Upper Title
+
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+            portfolioSection:
+              type: section
+              title: Portfolio
+              underline: true
+              fields:
+                header.portfolio:
+                  type: list
+                  label: Portfolio
+                  fields:
+                    .image:
+                      type: filepicker
+                      folder: '@self'
+                      label: Select portfolio file
+                      preview_images: true
+                      accept:
+                        - .png
+                        - .jpg
+                    .title:
+                      type: text
+                      label: Portfolio Item Title
+                    .category:
+                      type: selectize
+                      label: Portfolio Item Category
+                    .link:
+                      type: text
+                      label: Portfolio Item Link
+                    .description:
+                      type: textarea
+                      label: Portfolio Item Description
+                    .imageSize1:
+                      type: filepicker
+                      folder: '@self'
+                      label: Select first additional size of portfolio image
+                      preview_images: true
+                      accept:
+                        - .png
+                        - .jpg
+                    .imageSize2:
+                      type: filepicker
+                      folder: '@self'
+                      label: Select second additional size of portfolio image
+                      preview_images: true
+                      accept:
+                        - .png
+                        - .jpg
+                  

@@ -1,0 +1,55 @@
+<!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h3>Portfolio</h3>
+                <h1>See My Latest Projects.</h1>
+                
+                <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>
+            </div>
+        </div>
+
+        <div class="row masonry-wrap">
+            <div class="masonry">
+
+                {% for item in page.header.portfolio %}
+                    
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="{{ page.media[item.image].url() }}" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                                <img src="{{ page.media[item.image].url }}" 
+                                     srcset="{{ page.media[item.imageSize1].url }} 1x, {{ page.media[item.imageSize2].url }} 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                {{ item.title }}
+                            </h3>
+                            <p class="item-folio__cat">
+                                {{ item.category }}
+                            </p>
+                        </div>
+
+                        <a href="{{ item.link }}" class="item-folio__project-link" title="Project link">
+                            <i class="im im-link"></i>
+                        </a>
+
+                        <div class="item-folio__caption">
+                            <p>{{ item.description }}</p>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                {% endfor %}
+
+            </div>
+        </div> <!-- end masonry -->
+
+    </section> <!-- end works -->
