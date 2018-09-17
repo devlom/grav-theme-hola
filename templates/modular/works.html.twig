@@ -5,7 +5,7 @@
                 <h3>{{ page.header.smallTitle}}</h3>
                 <h1>{{ page.title }}.</h1>
                 
-                <p class="lead">{{ page.content }}</p>
+                <p class="lead">{{ page.content|striptags }}</p>
             </div>
         </div>
 

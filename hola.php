@@ -36,7 +36,6 @@ class Hola extends Theme
         $form_class_variables = [
 //            'form_outer_classes' => 'form-horizontal',
             'form_button_outer_classes' => 'button-wrapper',
-            'form_button_classes' => 'btn',
             'form_errors_classes' => '',
             'form_field_outer_classes' => 'form-group',
             'form_field_outer_label_classes' => 'form-label-wrapper',
