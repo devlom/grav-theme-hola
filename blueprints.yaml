@@ -123,6 +123,28 @@ form:
       validate:
         type: bool
 
+    footer-text:
+      type: text
+      label: Copyright Bottom Message
+      
+    footer-design:
+      type: text
+      label: About Design And Project Description
+    footer-social:
+      type: list
+      label: Social icons 
+      style: vertical
+      fields:
+        .socialIconClass:
+          type: text
+          label: Insert class Icons
+        .socialIconText:
+          type: text
+          label: Enter Icon Name
+        .socialIconLink:
+          type: text
+          label: Enter Social Icon Link
+
     blog_section:
       type: section
       title: Blog Defaults

@@ -1,0 +1,63 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.smallTitle:
+              type: text
+              autofocus: true
+              style: vertical
+              label: Small Upper Title
+
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+            phoneSection:
+              type: section
+              title: Phone
+              underline: true
+            
+            
+            header.phoneTitle:
+              type: text
+              label: Phone Section Title
+            header.phonePhone:
+              type: text
+              label: Phone Number
+            header.phoneMobile:
+              type: text
+              label: Mobile Number
+            header.phoneFax:
+              type: text
+              label: Phone FAX Number
+            header.emailTitle:
+              type: text
+              label: Email Section Title
+            header.emailAddress:
+              type: selectize
+              label: Email Address
+              validate:
+                type: text
+
+                
+            header.addressTitle:
+              type: text
+              label: Address Section Title
+            header.addressDetails:
+              type: textarea
+              label: Address Details
+            
+
+                
