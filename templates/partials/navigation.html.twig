@@ -1,18 +1,21 @@
-{% macro nav_loop(page) %}
+{% macro loop(page) %}
     {% for p in page.children.visible %}
-        {% set active_page = (p.active or p.activeChild) ? 'current' : '' %}
+        {% set current_page = (p.active or p.activeChild) ? 'current' : '' %}
         {% if p.children.visible.count > 0 %}
-            <li>
-                <a href="{{ p.url }}" class="smoothscroll {{ active_page }}">
+            <li class="has-children {{ current_page }}">
+                <a href="{{ p.url }}">
+                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
                     {{ p.menu }}
+                    <span></span>
                 </a>
                 <ul>
-                    {{ _self.nav_loop(p) }}
+                    {{ _self.loop(p) }}
                 </ul>
             </li>
         {% else %}
-            <li>
-                <a href="{{ p.url }}" class="smoothscroll {{ active_page }}">
+            <li class="{{ current_page }}">
+                <a class="smoothscroll" href="{{ p.url }}">
+                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
                     {{ p.menu }}
                 </a>
             </li>
@@ -20,7 +23,30 @@
     {% endfor %}
 {% endmacro %}
 
-<ul class="header-nav" {{ tree ? 'class="tree"' : '' }}>
-    {{ _self.nav_loop(pages) }}
+<ul class="header-nav">
+    {% if theme_config.dropdown.enabled %}
+        {{ _self.loop(pages) }}
+    {% else %}
+        {% for page in pages.children.visible %}
+            {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
+            <li class="{{ current_page }}">
+                <a class="smoothscroll" href="{{ page.url }}">
+                    {% if page.header.icon %}<i class="fa fa-{{ page.header.icon }}"></i>{% endif %}
+                    {{ page.menu }}
+                </a>
+            </li>
+        {% endfor %}
+    {% endif %}
+    {% for mitem in site.menu %}
+        <li>
+            <a href="{{ mitem.url }}">
+                {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
+                {{ mitem.text }}
+            </a>
+        </li>
+    {% endfor %}
+    {% if config.plugins.login.enabled and grav.user.username %}
+        <li><i class="fa fa-lock"></i> {% include 'partials/login-status.html.twig' %}</li>
+    {% endif %}
 </ul>
 
