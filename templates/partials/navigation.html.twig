@@ -1,10 +1,15 @@
 <ul class="header-nav">
+{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'})}}{% endmacro %}
     {% for module in page.collection() %}
         {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
+        {% if not module.header.hidemenu %}
+        
         <li class="{{ current_module }}">
-            <a href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a>
+            <a href="#{{ _self.pageLinkName(module.menu)}}">{{ module.menu }}</a>
         </li>
+        {% endif %}
     {% endfor %}
+    {% if not module.header.hidemenu %}
     {% for mitem in site.menu %}
         <li>
             <a {% if mitem.class %} class="{{ mitem.class }}" {% endif %} href="{{ mitem.url }}">
@@ -15,4 +20,5 @@
             </a>
         </li>
     {% endfor %}
+    {% endif %}
 </ul>

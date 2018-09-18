@@ -1,41 +1,125 @@
 {% extends 'partials/base.html.twig' %}
-{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
-{% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
-{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
-{% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
-{% set hero_image_name = page.header.hero_image %}
+{% block header %}
+    <header class="s-header">
 
-{% block hero %}
-    {% if hero_image_name %}
-        {% set hero_image = page.media[hero_image_name] %}
-        {% set content %}
-            <h1>{{ page.title }}</h1>
-            <h2>{{ page.header.subtitle }}</h2>
-            {% include 'partials/blog/date.html.twig' %}
-            {% include 'partials/blog/taxonomy.html.twig' %}
-        {% endset %}
-        {% include 'partials/hero.html.twig' with {id: 'blog-hero'} %}
+        <div class="header-logo">
+            <a class="footer-site-logo" href="#0">
+                {% include 'partials/logo.html.twig' %}
+            </a>
+        </div>
 
-    {% endif %}
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li>
+                    <a href="index.html#home" title="home">Home</a>
+                </li>
+                <li>
+                    <a href="index.html#about" title="about">About</a>
+                </li>
+                <li>
+                    <a href="index.html#works" title="works">Works</a>
+                </li>
+                <li class="current">
+                    <a href="blog.html" title="blog">Blog</a>
+                </li>
+                <li>
+                    <a href="index.html#contact" title="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0">
+            <span>Menu</span></a>
+
+    </header>
+    <!-- end s-header -->
 {% endblock %}
+{% block content %}
+    <article class="blog-single">
 
-{% block body %}
-<section id="body-wrapper" class="section blog-listing">
-    <section class="container {{ grid_size }}">
+        <!-- page header/blog hero ================================================== -->
+        <div class="page-header page-header--single page-hero" style="background-image:url({{ page.media[page.header.hero_image].url() }})">
 
-        {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-            {% include 'partials/breadcrumbs.html.twig' %}
-        {% endif %}
+            <div class="row page-header__content narrow">
+                <article class="col-full">
+                    <div class="page-header__info">
+                        <div class="page-header__cat">
+                            {% for category in page.header.taxonomy.category %}
+                                <a href="#0">{{ category }}</a>
+                            {% endfor %}
 
-        {% embed 'partials/layout.html.twig' %}
-            {% block item %}
-                {% include 'partials/blog-item.html.twig' %}
-            {% endblock %}
-            {% block sidebar %}
-                {% include 'partials/sidebar.html.twig' %}
-            {% endblock %}
-        {% endembed %}
+                        </div>
+                    </div>
+                    <h1 class="page-header__title">
+                        <a href="#0" title="">
+                            {{page.title}}
+                        </a>
+                    </h1>
+                    <ul class="page-header__meta">
+                        <li class="date">{{page.date|date("F d, Y")}}</li>
+                        <li class="author">
+                            By
+                            <span>
+                                {% for author in page.header.taxonomy.author %}
+                                    {{ author }}
+                                {% endfor %}
+                            </span>
+                        </li>
+                    </ul>
 
-    </section>
-</section>
-{% endblock %}
+                </article>
+            </div>
+
+        </div>
+        <!-- end page-header -->
+
+        <div class="row blog-content">
+            <div class="col-full blog-content__main">
+
+                <p class="lead">{{ page.header.lead }}</p>
+
+                {{ page.content }}
+
+                <p class="blog-content__tags">
+                    <span>Post Tags</span>
+
+                    <span class="blog-content__tag-list">
+                        {% for tag in page.header.taxonomy.tag %}
+                            <a href="#0">{{ tag }}</a>
+                        {% endfor %}
+                    </span>
+
+                </p>
+
+                <div class="blog-content__pagenav">
+                    <div class="blog-content__nav">
+                        <div class="blog-content__prev">
+                            {% if not page.isFirst %}
+                                <a class="button" href="{{ page.nextSibling.url }}">
+                                    <span>Next Post</span>{{ page.nextSibling.title }}</a>
+                            {% endif %}
+                        </div>
+                        <div class="blog-content__next">
+                            {% if not page.isLast %}
+                                <a class="button" href="{{ page.prevSibling.url }}">
+                                    <span>Previus Post</span>
+                                    {{ page.prevSibling.title }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                        <div class="blog-content__all">
+                            <a href="../blog" class="btn btn--primary">
+                                View All Post
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end blog-content__main -->
+            </div>
+            <!-- end blog-content -->
+
+        </article>
+
+    {% endblock %}

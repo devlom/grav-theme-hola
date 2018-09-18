@@ -5,6 +5,16 @@ form:
     tabs:
 
       fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.lead:
+              type: textarea
+              autofocus: true
+              style: vertical
+              label: Lead Post Pargraph
         blog:
           type: tab
           title: Blog Item
