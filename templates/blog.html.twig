@@ -4,41 +4,6 @@
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_pagination = header_var('show_pagination', [page, blog]) | defined(true) %}
 
-{% block header %}
-    <header class="s-header">
-
-        <div class="header-logo">
-            <a class="footer-site-logo" href="#0">
-                {% include 'partials/logo.html.twig' %}
-            </a>
-        </div>
-
-        <nav class="header-nav-wrap">
-            <ul class="header-nav">
-                <li>
-                    <a href="index.html#home" title="home">Home</a>
-                </li>
-                <li>
-                    <a href="index.html#about" title="about">About</a>
-                </li>
-                <li>
-                    <a href="index.html#works" title="works">Works</a>
-                </li>
-                <li class="current">
-                    <a href="blog.html" title="blog">Blog</a>
-                </li>
-                <li>
-                    <a href="index.html#contact" title="contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
-
-        <a class="header-menu-toggle" href="#0">
-            <span>Menu</span></a>
-
-    {% endblock %}
-    {# End Header #}
-
     {% block body %}
         {% for child in collection %}
             {% if loop.first %}
@@ -59,13 +24,13 @@
                             </div>
 
                             <h1 class="page-header__title">
-                                <a href="#0" title="">
+                                <a href="{{child.url}}" title="">
                                     {{child.title}}
                                 </a>
                             </h1>
                             <p>{{ child.content|slice(0, 150) }}...</p>
                             <p>
-                                <a href="#0" class="btn btn--stroke page-header__btn">Read More</a>
+                                <a href="{{ child.url }}" class="btn btn--stroke page-header__btn">Read More</a>
                             </p>
                         </article>
                     </div>
