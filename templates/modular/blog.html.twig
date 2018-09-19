@@ -1,3 +1,7 @@
+{% set blog_image = page.media.images[page.header.hero_image]?: page.media.images | first %}
+{% set collection = page.collection() %}
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% set show_pagination = header_var('show_pagination', [page, blog]) | defined(true) %}
 <!-- blog
     ================================================== -->
     <section id="blog" class="s-blog target-section">
@@ -14,28 +18,28 @@
             <div class="col-full">
 
                 <div class="blog-list block-1-2 block-tab-full">
-                {% for item in page.header.blog %}
+                  {% for page in collection %}
 
-                
-                    <article class="col-block">
-                                
-                        <div class="blog-date">
-                            <a href="{{ item.link }}">{{ item.date }}</a>
-                        </div>  
-                        
-                        <h2 class="h01"><a href="{{ item.link }}">{{ item.title }}</a></h2>
-                        <p>
-                        {{ item.description }}
-                        </p>
+                                <article class="col-block">
 
-                        <div class="blog-cat">
-                                <a href="{{ item.categoryLink }}">{{ item.postCategory }}</a>
-                        </div>
+                                    <div class="blog-date">
+                                        <a href="{{ page.url }}">{{page.date|date("F d, Y") }}</a>
+                                    </div>
 
-                        
-                    </article>
+                                    <h2 class="h01">
+                                        <a href="{{ page.link }}">{{ page.title }}</a>
+                                    </h2>
+                                    <p>
+                                        {{ page.header.lead|slice (0.300) }}
+                                    </p>
 
-                    {% endfor %}
+                                    <div class="blog-cat">
+                                        <a href="{{ page.categoryLink }}">{{ page.postCategory }}</a>
+                                    </div>
+
+                                </article>
+
+                        {% endfor %}
                 </div> <!-- end blog-list -->
 
             </div> <!-- end col-full -->

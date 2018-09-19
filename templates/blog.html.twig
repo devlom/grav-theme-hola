@@ -2,25 +2,7 @@
 {% set blog_image = page.media.images[page.header.hero_image]?: page.media.images | first %}
 {% set collection = page.collection() %}
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
-{% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog]) | defined(true) %}
-{% set show_sidebar = header_var('show_sidebar', [page, blog]) | defined(true) %}
 {% set show_pagination = header_var('show_pagination', [page, blog]) | defined(true) %}
-
-{% block stylesheets %}
-    {% do 
-        assets.addCss('theme://css/bricklayer.css') %}
-    {{ parent() }}
-{% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    {% do 
-        assets.add('theme://js/bricklayer.min.js') %}
-{% endblock %}
-
-{% block hero %}
-    {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
-{% endblock %}
 
 {% block header %}
     <header class="s-header">
@@ -56,82 +38,74 @@
 
     {% endblock %}
     {# End Header #}
+
     {% block body %}
-        {% for child in collection | slice(0, 1) %}
-            <section class="page-header page-hero" style="background-image:url(images/blog/blog-bg-01.jpg)">
+        {% for child in collection %}
+            {% if loop.first %}
+                <section class="page-header page-hero" style="background-image:url({{ child.media[child.header.hero_image].url() }})">
 
-                <div class="row page-header__content">
-                    <article class="col-full">
+                    <div class="row page-header__content">
+                        <article class="col-full">
 
-                        <div class="page-header__info">
-                            <div class="page-header__cat">
-                                {% for category in child.taxonomy.category %}
-                                    <a href="#0">{{ category }}</a>
-                                {% endfor %}
+                            <div class="page-header__info">
+                                <div class="page-header__cat">
+                                    {% for category in child.taxonomy.category %}
+                                        <a href="#0">{{ category }}</a>
+                                    {% endfor %}
+                                </div>
+                                <div class="page-header__date">
+                                    {{child.date|date("F d, Y")}}
+                                </div>
                             </div>
-                            <div class="page-header__date">
-                                {{child.date|date("F d, Y")}}
-                            </div>
-                        </div>
 
-                        <h1 class="page-header__title">
-                            <a href="#0" title="">
-                                {{child.title}}
-                            </a>
-                        </h1>
-                        <p>{{ child.content|slice(0, 150) }}...</p>
-                        <p>
-                            <a href="#0" class="btn btn--stroke page-header__btn">Read More</a>
-                        </p>
-                    </article>
-                </div>
+                            <h1 class="page-header__title">
+                                <a href="#0" title="">
+                                    {{child.title}}
+                                </a>
+                            </h1>
+                            <p>{{ child.content|slice(0, 150) }}...</p>
+                            <p>
+                                <a href="#0" class="btn btn--stroke page-header__btn">Read More</a>
+                            </p>
+                        </article>
+                    </div>
 
-            </section>
-            <!-- end highlighted-post -->
+                </section>
+                <!-- end highlighted-post -->
+
+            {% endif %}
         {% endfor %}
+
         <div class="blog-content-wrap">
             <div class="row blog-content">
                 <div class="col-full">
                     <div class="blog-list block-1-2 block-tab-full">
-                        {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-                            {% include 'partials/breadcrumbs.html.twig' %}
-                        {% endif %}
+                        {% for child in collection %}
+                            {% if not loop.first %}
+                                <article class="col-block">
 
-                        {% embed 'partials/layout.html.twig' with {
-                            blog : page
-                        } %}
-                            {% block item %}
-
-                                <div class="bricklayer">
-                                    {% for child in collection %}
-                                        {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
-                                    {% endfor %}
-                                </div>
-
-                                {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
-                                    <div id="listing-footer">
-                                        {% include 'partials/pagination.html.twig' with {
-                                            base_url : page.url,
-                                            pagination: collection.params.pagination
-                                        } %}
+                                    <div class="blog-date">
+                                        <a href="{{ child.url }}">{{child.date|date("F d, Y") }}</a>
                                     </div>
-                                {% endif %}
 
-                            {% endblock %}
+                                    <h2 class="h01">
+                                        <a href="{{ child.link }}">{{ child.title }}</a>
+                                    </h2>
+                                    <p>
+                                        {{ child.header.lead|slice (0.300) }}
+                                    </p>
 
-                            {% block sidebar %}
-                                {% include 'partials/sidebar.html.twig' %}
-                            {% endblock %}
-                        {% endembed %}
+                                    <div class="blog-cat">
+                                        <a href="{{ child.categoryLink }}">{{ child.postCategory }}</a>
+                                    </div>
+
+                                </article>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-
             </div>
-        </section>
-        <script>
-            var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
-        </script>
+        </div>
+
     {% endblock %}
-        {% block footer %}
-         {% include 'partials/footer.html.twig' %}
-        {% endblock %}
+    {# End Body Block #}
