@@ -60,17 +60,27 @@
                                         {{ child.header.lead|slice (0.300) }}
                                     </p>
 
-                                    <div class="blog-cat">
-                                        <a href="{{ child.categoryLink }}">{{ child.postCategory }}</a>
-                                    </div>
+                                   <div class="blog-cat">
+                                    {% for category in child.header.taxonomy.category %}
+                                        <a href="{{ taxonomy.findTaxonomy(category) }}">{{ category }}</a>
+                                    {% endfor %}
+
+                        </div>
 
                                 </article>
                             {% endif %}
                         {% endfor %}
                     </div>
+                                     {% if config.plugins.pagination.enabled and collection.params.pagination %}
+                {% include 'partials/pagination.html.twig' with {
+                    'base_url' : page.url,
+                    'pagination' : collection.params.pagination
+                } %}
+            {% endif %}
                 </div>
             </div>
         </div>
+   
 
     {% endblock %}
     {# End Body Block #}
