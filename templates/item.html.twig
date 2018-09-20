@@ -50,7 +50,7 @@
 
                     <span class="blog-content__tag-list">
                         {% for tag in page.header.taxonomy.tag %}
-                            <a href="#0">{{ tag }}</a>
+                            <a href="{{ page.parent.url(true) }}/tag:{{ tag }}">{{ tag }}</a>
                         {% endfor %}
                     </span>
 
@@ -74,7 +74,7 @@
                     </div>
 
                         <div class="blog-content__all">
-                            <a href="../blog" class="btn btn--primary">
+                            <a href="{{ page.parent.url() }}" class="btn btn--primary">
                                 View All Post
                             </a>
                         </div>
