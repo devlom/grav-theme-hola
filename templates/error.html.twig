@@ -1,12 +1,25 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<div id="error">
-		<div>
-			<h1>{{ 'ERROR'|t }} {{ page.header.http_response_code }}</h1>
-			<p>
-				{{ page.content }}
-			</p>
-		</div>
-	</div>
+        <section class="small-page-header page-hero" style="background-image:url({{ url('theme://images/error.jpg') }}">
+    <div class="row page-header__content narrow text-center">
+    <h1 class="page-header__title">
+                        {{page.title}}
+                    </h1>
+        </div>
+    </section>
+
+    <section id="error" class="s-error">
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <div>
+                    <h1>  {{ 'ERROR'|t }}
+                        {{ page.header.http_response_code }}:</h1>
+                    <p>
+                        {{ page.content }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

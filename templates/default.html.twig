@@ -1,5 +1,23 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    {{ page.content }}
+    <section class="small-page-header page-hero" style="background-image:url({{ url('theme://images/default.jpg') }}">
+    <div class="row page-header__content narrow text-center">
+    <h1 class="page-header__title">
+                            {{page.title}}
+                    </h1>
+        </div>
+    </section>
+
+    <section id="default" class="s-default">
+        <div class="row narrow section-intro">
+            <div class="col-full">
+                <div>
+                    <p>
+                        {{ page.content }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

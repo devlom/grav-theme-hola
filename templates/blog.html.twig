@@ -15,7 +15,7 @@
                         <div class="page-header__info">
                             <div class="page-header__cat">
                                 {% for category in child.taxonomy.category %}
-                                    <a href="#0">{{ category }}</a>
+                                    <a href="{{ page.url(true) }}/category:{{ category }}">{{ category }}</a>
                                 {% endfor %}
                             </div>
                             <div class="page-header__date">

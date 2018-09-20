@@ -3474,7 +3474,35 @@ footer a:hover, footer a:focus {
     }
 }
 
+/* ===================================================================
+ * # error
+ *
+ * ------------------------------------------------------------------- */
+ .s-error {
+    background-color: #ffffff;
+    padding-top: 10.6rem;
+    padding-bottom: 10.2rem;
+    position: relative;
+}
+.s-error p {
+    color: #862121;
+}
+ 
 
+/* ===================================================================
+ * # default
+ *
+ * ------------------------------------------------------------------- */
+ .s-default{
+    background-color: #ffffff;
+    padding-top: 9.6rem;
+    padding-bottom: 10.2rem;
+    position: relative;
+}
+.s-default .section-intro{
+    text-align: left;
+}
+ 
 
 /* ===================================================================
  * # blog styles - (_blog.scss)
@@ -3505,6 +3533,16 @@ article.blog-single .blog-content {
     color: rgba(255, 255, 255, 0.5);
     min-height: 50.4rem;
 }
+.small-page-header {
+    background-color: #0D0A0B;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    padding-top: 15.4rem;
+    padding-bottom: 5.2rem;
+    position: relative;
+    color: rgba(255, 255, 255, 0.5);
+    min-height: 35rem;
+}
 
 .page-header--single {
     padding-top: 22.8rem;
@@ -3512,6 +3550,7 @@ article.blog-single .blog-content {
     text-align: center;
 }
 
+.small-page-header::before,
 .page-header::before {
     display: block;
     content: "";
@@ -3524,6 +3563,7 @@ article.blog-single .blog-content {
     background-color: #0D0A0B;
 }
 
+.small-page-header::after,
 .page-header::after {
     display: block;
     content: "";
