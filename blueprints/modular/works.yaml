@@ -31,6 +31,7 @@ form:
               fields:
                 header.portfolio:
                   type: list
+                  style: vertical
                   label: Portfolio
                   fields:
                     .image:

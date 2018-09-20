@@ -13,7 +13,7 @@ form:
             stats:
               type: section
               title: Statystic section
-              text: Enter Statystic Elements
+              text: 'Enter Statystic Elements, icons bank: https://iconmonstr.com/iconicfont/'
               underline: true
               fields:
                 header.stats:
@@ -30,6 +30,7 @@ form:
                     .statIconClass:
                       type: text
                       label: Statistic Custom Icon
+                      description: 'You can use classes: im-arrow-up/im-arrow-down '
                     .statHighlight:
                       type: toggle
                       highlight: 1
