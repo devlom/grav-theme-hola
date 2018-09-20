@@ -1,0 +1,34 @@
+<section id="services">
+<div class="overlay"></div>
+<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h3>{{ page.header.smallTitle}}</h3>
+   			<h1>{{ page.title }}</h1>
+
+   			<p class="lead">{{ page.description }}</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row services-content">
+
+   		<div id="owl-slider" class="owl-carousel services-list">
+           {% for item in page.header.services %}
+               
+           
+        <div class="service">	
+        <span class="icon"><i class="im {{ item.icon }}"></i></span>            
+        <div class="service-content">	
+        <h3>{{ item.title }}</h3>
+        <p class="desc">{{ item.description }}
+	         		</p>
+	         		</div> 	         	 
+                </div>
+
+                {% endfor %}
+              
+</div> <!-- /services-list -->
+   		
+   	</div> 
+		</section> 

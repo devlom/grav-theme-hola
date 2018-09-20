@@ -1,0 +1,63 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.smallTitle:
+              type: text
+              autofocus: true
+              style: vertical
+              label: Small Upper Title
+        
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+
+            timelineSection:
+              type: section
+              title: Resume Timeline
+              text: 'Icon Bank: https://iconmonstr.com/iconicfont/'
+              underline: true
+
+            header.timeline:
+              type: list
+              label: Timeline Section
+              style: vertical
+              fields:
+                .resumeTitle:
+                  type: text
+                  label: Resume Section Title
+                .timelineItems:
+                  type: list
+                  label: Timeline Items
+                  fields:    
+                    .position:
+                      type: text
+                      label: Timeline Item Position
+                    .date:
+                      type: text
+                      label: Timeline Item Date
+                    .icon_class:
+                      type: text
+                      label: Icon Class
+                    .title:
+                      type: text
+                      label: Timeline Item
+                    .descripiton:
+                      type: textarea
+                      label: Timeline Description
+                  
+
+                

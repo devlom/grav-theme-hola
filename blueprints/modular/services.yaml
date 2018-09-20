@@ -1,0 +1,45 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.smallTitle:
+              type: text
+              autofocus: true
+              style: vertical
+              label: Small Upper Title
+        
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+            serviceSection:
+              type: section
+              title: Services
+              text: 'Icon Bank: https://iconmonstr.com/iconicfont/'
+              underline: true
+            header.services:
+              type: list
+              style: vertical
+              label: Service Item
+              fields:
+                .icon:
+                  type: text
+                  label: Service Icon
+                .title:
+                  type: text
+                  label: Service Title
+                .description:
+                  type: textarea
+                  label: Service Description

@@ -4122,7 +4122,273 @@ article.blog-single .blog-content {
      padding-top: 15rem;
      padding-bottom: 12rem;
 }
+/** 
+ * ===================================================================
+ * 12. resume - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+ .grey-section {
+	background: #ebebeb;
+}
+ #resume {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+}
 
+#resume .resume-header {
+	text-align: center;
+}
+#resume .resume-header h2 {
+	color: #862121;
+}
+
+#resume .resume-timeline {
+	max-width: 980px;
+}
+#resume .timeline-wrap {
+	position: relative;
+	margin-top: 1.5rem;
+	margin-bottom: 6rem;
+}
+#resume .timeline-wrap::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	position: absolute;
+	left: 35%;
+	top: 0;
+}
+#resume .timeline-block {
+	position: relative;
+	padding-top: 1.5rem;
+}
+#resume .timeline-ico {
+	height: 4.8rem;
+	width: 4.8rem;
+	line-height: 4.8rem;
+	background: #313131;
+	border-radius: 50%;
+	text-align: center;
+	color: #FFFFFF;
+	position: absolute;
+	left: 35%;
+	top: .9rem;
+	margin-left: -2.4rem;
+}
+#resume .timeline-ico i {
+	position: relative;
+	left: .05rem;
+	top: .5rem;
+}
+
+#resume .timeline-header {
+	float: left;
+	width: 35%;
+	padding-right: 90px;
+	text-align: right;
+}
+#resume .timeline-header h3 {
+	margin-bottom: 0;
+}
+#resume .timeline-header p {
+	font-family: "poppins-regular", sans-serif;
+	font-size: 1.6rem;
+	color: #888888;
+}
+#resume .timeline-content {
+	margin-left: 35%;
+	padding-left: 60px;
+}
+#resume .timeline-content h4 {
+	position: relative;
+	padding-bottom: 1.8rem;
+}
+#resume .timeline-content h4::after {
+	content: "";
+	display: block;
+	height: 3px;
+	width: 50px;
+	background: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+/** 
+ * ===================================================================
+ * 15. services - (_layout.scss)
+ *
+ * -------------------------------------------------------------------
+ */
+ */
+
+ /* 
+  *  01. Core Owl Carousel CSS File
+  *	 v1.3.3
+  */
+ 
+ /* clearfix */
+ .owl-carousel .owl-wrapper:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+ }
+ 
+ /* display none until init */
+ .owl-carousel {
+     display: none;
+     position: relative;
+     width: 100%;
+     -ms-touch-action: pan-y;
+ }
+ .owl-carousel .owl-wrapper {
+     display: none;
+     position: relative;
+     -webkit-transform: translate3d(0px, 0px, 0px);
+ }
+ .owl-carousel .owl-wrapper-outer {
+     overflow: hidden;
+     position: relative;
+     width: 100%;
+ }
+ .owl-carousel .owl-wrapper-outer.autoHeight {
+     -webkit-transition: height 500ms ease-in-out;
+     -moz-transition: height 500ms ease-in-out;
+     -ms-transition: height 500ms ease-in-out;
+     -o-transition: height 500ms ease-in-out;
+     transition: height 500ms ease-in-out;
+ }
+ .owl-carousel .owl-item {
+     float: left;
+ }
+ .owl-controls .owl-page, .owl-controls .owl-buttons div {
+     cursor: pointer;
+ }
+ .owl-controls {
+     -webkit-user-select: none;
+     -khtml-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     -webkit-tap-highlight-color: transparent;
+ }
+ 
+ /* mouse grab icon */
+ .grabbing {
+     cursor: url(grabbing.png) 8 8, move;
+ }
+ 
+ /* fix */
+ .owl-carousel .owl-wrapper, .owl-carousel .owl-item {
+     -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+     -ms-backface-visibility: hidden;
+     -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+     -ms-transform: translate3d(0, 0, 0);
+ }
+ 
+ /* 
+  *  Owl Carousel CSS3 Transitions 
+  *  v1.3.2
+  */
+ .owl-origin {
+     -webkit-perspective: 1200px;
+     -webkit-perspective-origin-x: 50%;
+     -webkit-perspective-origin-y: 50%;
+     -moz-perspective: 1200px;
+     -moz-perspective-origin-x: 50%;
+     -moz-perspective-origin-y: 50%;
+     perspective: 1200px;
+ }
+
+ #services {
+	background: #ffffff url(../images/bg.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+    position: relative;
+    color: #000000;
+}
+#services .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: white;
+	opacity: .9;
+}
+
+#services .section-intro {
+	margin-bottom: 1.8rem;
+}
+
+#services .section-intro h1 {
+	color: #000000;
+}
+#services .section-intro p {
+	color: #000000;
+}
+.services-content {
+	max-width: 1200px;
+}
+.services-list {
+	margin-top: 1.2rem;
+	text-align: center;
+}
+.services-list .service {
+	margin-bottom: 1.2rem;
+	padding: 0 30px;
+}
+.services-list .icon {
+	display: inline-block;
+	margin-bottom: 0;
+}
+.services-list .icon i {
+	font-size: 5rem;
+    color: #000000;
+    top: 4rem;
+    position: relative;
+}
+.services-list h3 {
+	color: #000000;
+}
+.services-list .desc {
+	color: #000000;
+}
+
+
+/* pagination */
+.owl-pagination {
+	text-align: center;
+	width: 100%;
+	margin: .6rem 0 0;
+}
+.owl-theme .owl-controls .owl-page {
+	display: inline-block;
+}
+.owl-theme .owl-controls .owl-page span {
+	display: block;
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: 1.2rem .8rem 0 .8rem;
+	border-radius: 50%;
+	display: inline-block;
+    background: #FFFFFF;
+    border: 1px solid #862121;
+}
+.owl-theme .owl-controls .owl-page.active span {
+	background: #862121;
+}
 
 /* ------------------------------------------------------------------- 
  * responsive:
