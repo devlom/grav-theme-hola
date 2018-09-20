@@ -42,7 +42,7 @@
             <a href="{{ page.header.button1Link }}" class="btn btn--primary full-width">{{ page.header.button1Text }}</a>
         </div>
         <div class="col-six tab-full right">
-            <a href="{{ page.header.button1Link }}" class="btn full-width">{{ page.header.button1Text }}</a>
+            <a href="{{ page.header.button2Link }}" class="btn full-width">{{ page.header.button2Text }}</a>
         </div>
 
     </div>
@@ -54,50 +54,24 @@
             <h3>{{ page.header.expTitle }}</h3>
         </div>
         {% for item in page.header.experienceTimeline %}
-            {% if item is odd %}
-                <div class="col-six tab-full left">
-                    <div class="timeline">
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">{{ item.date }}</p>
-                                <h3>{{ item.client }}</h3>
-                                <h5>{{ item.position }}</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>{{ item.description }}</p>
-                            </div>
+            <div class="col-six tab-full {% if item is odd %}left{% else %}right{% endif %}">
+                <div class="timeline">
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">{{ item.date }}</p>
+                            <h3>{{ item.client }}</h3>
+                            <h5>{{ item.position }}</h5>
                         </div>
-                        <!-- end timeline__block -->
-
-                    </div>
-                    <!-- end timeline -->
-                </div>
-                <!-- end left -->
-            {% endif %}
-            {% if item is even %}
-                <div class="col-six tab-full right">
-                    <div class="timeline">
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">{{ item.date }}</p>
-                                <h3>{{ item.client }}</h3>
-                                <h5>{{ item.position }}</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>{{ item.description }}</p>
-                            </div>
+                        <div class="timeline__desc">
+                            <p>{{ item.description }}</p>
                         </div>
-                        <!-- end timeline__block -->
-
                     </div>
-                    <!-- end timeline -->
+                    <!-- end timeline__block -->
                 </div>
-                <!-- end right -->
-            {% endif %}
+                <!-- end timeline -->
+            </div>
+            <!-- end left -->
         {% endfor %}
     </div>
     <!-- end about-content timeline -->
