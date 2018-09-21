@@ -31,6 +31,9 @@ form:
                       type: iconpicker
                       label: Statistic Custom Icon
                       description: 'You can use classes: im-arrow-up/im-arrow-down '
+                    .statIconLink:
+                      type: text
+                      label: Icon External Link
                     .statHighlight:
                       type: toggle
                       highlight: 1

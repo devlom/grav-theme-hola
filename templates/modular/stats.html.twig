@@ -8,7 +8,7 @@
             <div class="col-block stats__col {% if item.statHighlight == '1'%}stats__col--highlight{% endif %}">
             {% if item.statIconClass %}
             <div class="stats__upsign">
-                    <a href="#"><i class="{{item.statIconClass}}" aria-hidden="true"></i></a>
+                    <a href="{{item.statIconLink}}"><i class="{{item.statIconClass}}" aria-hidden="true"></i></a>
                 </div>
             {% endif %}
                 <div class="stats__count">
