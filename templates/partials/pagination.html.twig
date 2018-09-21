@@ -6,9 +6,9 @@
 <ul class="pagination">
     {% if pagination.hasPrev %}
         {% set url =  (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
-        <li><a class="prev" rel="prev" href="{{ url }}"><i class="im im-arrow-left"></i></a></li>
+        <li><a class="prev" rel="prev" href="{{ url }}"><i class="fa fa-long-arrow-left"></i></a></li>
     {% else %}
-        <li><span><i class="im im-arrow-left"></i></span></li>
+        <li><span><i class="fa fa-long-arrow-left"></i></span></li>
     {% endif %}
 
     {% for paginate in pagination %}
@@ -25,9 +25,9 @@
     {% endfor %}
     {% if pagination.hasNext %}
         {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
-        <li><a class="next" rel="next" href="{{ url }}"><i class="im im-arrow-right"></i></a></li>
+        <li><a class="next" rel="next" href="{{ url }}"><i class="fa fa-long-arrow-right"></i></a></li>
     {% else %}
-        <li><span><i class="im im-arrow-right"></i></span></li>
+        <li><span><i class="fa fa-long-arrow-right"></i></span></li>
     {% endif %}
 </ul>
 

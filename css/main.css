@@ -3932,7 +3932,7 @@ article.blog-single .blog-content {
     font-family: "montserrat-bold", sans-serif;
 }
 .pagination i {
-    top: .1rem;
+    top: -.1rem;
 position: relative;
 font-size: 14px;
 }
