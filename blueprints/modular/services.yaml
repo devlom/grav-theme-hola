@@ -35,7 +35,7 @@ form:
               label: Service Item
               fields:
                 .icon:
-                  type: text
+                  type: iconpicker
                   label: Service Icon
                 .title:
                   type: text

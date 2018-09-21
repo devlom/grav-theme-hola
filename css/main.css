@@ -1918,8 +1918,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-social i {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     right: 0;
+    width: 22px;
+    text-align: center;
     -webkit-transform: scale(0.7);
     -ms-transform: scale(0.7);
     transform: scale(0.7);
@@ -4208,7 +4210,7 @@ font-size: 14px;
 #resume .timeline-ico i {
 	position: relative;
 	left: .05rem;
-	top: .5rem;
+	top: .15rem;
 }
 
 #resume .timeline-header {

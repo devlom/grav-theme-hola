@@ -28,7 +28,7 @@ form:
             timelineSection:
               type: section
               title: Resume Timeline
-              text: 'Icon Bank: https://iconmonstr.com/iconicfont/'
+              text: 'Icon Bank: https://fontawesome.com/v4.7.0/icons/'
               underline: true
 
             header.timeline:
@@ -50,7 +50,7 @@ form:
                       type: text
                       label: Timeline Item Date
                     .icon_class:
-                      type: text
+                      type: iconpicker
                       label: Icon Class
                     .title:
                       type: text

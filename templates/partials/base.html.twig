@@ -25,6 +25,7 @@
                     assets.addCss('theme://css/vendor.css') %}
                 {% do 
                     assets.addCss('theme://css/main.css') %}
+                {% do assets.addCss('theme://css/font-awesome.min.css') %}
 
             {% endblock %}
             {{ assets.css() }}
@@ -46,46 +47,45 @@
         {% endblock head %}
     </head>
     <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
-    <!-- header
-    ================================================== -->      
-            {% block header %}
-                <header class="s-header">
-                    <div class="header-logo">
-                    <a class="footer-site-logo" href="#0">
+        <!-- header ================================================== -->
+        {% block header %}
+            <header class="s-header">
+                <div class="header-logo">
+                    <a class="footer-site-logo" href="{{ base_url_relative }}">
                         {% include 'partials/logo.html.twig' %}
-                        </a>
-                    </div>
-                    <nav class="header-nav-wrap">
-                        
-                        {% block header_navigation %}
-                            {% include 'partials/navigation.html.twig' %}
-                        {% endblock %}
-
-                        {% if config.plugins.login.enabled and grav.user.username %}
-                            <span class="login-status-wrapper">
-                                <i class="fa fa-user"></i>
-                                {% include 'partials/login-status.html.twig' %}</span>
-                        {% endif %}
-                    </nav>
-                    <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-                </header>
-                <div class="mobile-menu">
-                    <div class="button_container" id="toggle">
-                        <span class="top"></span>
-                        <span class="middle"></span>
-                        <span class="bottom"></span>
-                    </div>
+                    </a>
                 </div>
-            {% endblock %}
-    <!-- end s-header -->
+                <nav class="header-nav-wrap">
 
-             {% block body %}
-                {% block content %}{% endblock %}
-            {% endblock %}
+                    {% block header_navigation %}
+                        {% include 'partials/navigation.html.twig' %}
+                    {% endblock %}
 
+                    {% if config.plugins.login.enabled and grav.user.username %}
+                        <span class="login-status-wrapper">
+                            <i class="fa fa-user"></i>
+                            {% include 'partials/login-status.html.twig' %}</span>
+                    {% endif %}
+                </nav>
+                <a class="header-menu-toggle" href="#0">
+                    <span>Menu</span></a>
+            </header>
+            <div class="mobile-menu">
+                <div class="button_container" id="toggle">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </div>
+            </div>
+        {% endblock %}
+        <!-- end s-header -->
+
+        {% block body %}
+            {% block content %}{% endblock %}
+        {% endblock %}
 
         {% block footer %}
-         {% include 'partials/footer.html.twig' %}
+            {% include 'partials/footer.html.twig' %}
         {% endblock %}
 
         {% block bottom %}
@@ -93,4 +93,3 @@
         {% endblock %}
 
     </body>
-

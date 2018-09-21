@@ -26,8 +26,8 @@ form:
                   style: vertical
                   fields:
                     .socialIconClass:
-                      type: text
-                      label: Insert class Icons
+                      type: iconpicker
+                      label: Pick Desired Icons
                     .socialIconText:
                       type: text
                       label: Enter Icon Name
