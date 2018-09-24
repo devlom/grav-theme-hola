@@ -6,7 +6,62 @@ header-animated: true
 header-dark: false
 header-transparent: false
 sticky-footer: true
-blog-page: '/blog'
+blog-page: /blog
 spectre:
   exp: false
   icons: false
+custom_logo:
+  user/themes/hola/images/logo/logo.png:
+    name: logo.png
+    type: image/png
+    size: 5238
+    path: user/themes/hola/images/logo/logo.png
+footer-text: '© Copyright Hola 2018'
+footer-design: 'Design by <a href="https://www.styleshout.com/">styleshout</a>'
+footer-social:
+  -
+    socialIconClass: 'fa fa-facebook-square'
+    socialIconText: Facebook
+    socialIconLink: '#0'
+  -
+    socialIconClass: 'fa fa-twitter'
+    socialIconText: Twitter
+    socialIconLink: '#0'
+  -
+    socialIconClass: 'fa fa-instagram'
+    socialIconText: Instagram
+    socialIconLink: '#0'
+  -
+    socialIconClass: 'fa fa-behance'
+    socialIconText: Behance
+    socialIconLink: '#0'
+  -
+    socialIconClass: 'fa fa-pinterest'
+    socialIconText: Pinterest
+    socialIconLink: '#0'
+item_name: Contact
+modular_link: '../#contact'
+subpage_link: /home
+theme_menu:
+  -
+    item_name: Home
+    modular_link: home
+    subpage_link: /home
+  -
+    item_name: About
+    modular_link: about
+    subpage_link: /home
+  -
+    item_name: Works
+    modular_link: works
+    subpage_link: /home
+  -
+    item_name: Styles
+    subpage_link: /styles
+  -
+    item_name: Blog
+    subpage_link: /blog
+  -
+    item_name: Contact
+    modular_link: contact
+    subpage_link: /home

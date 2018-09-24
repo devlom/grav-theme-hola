@@ -1,14 +1,14 @@
 name: Hola
-version: 1.2.0
-description: New Grav Default Theme
-icon:  microchip
+version: 1.0.0
+description: Hola is a modern and stylish vCard website template. 
+icon:  id-card-o
 author:
-  name: Team Grav
-  email: devs@getgrav.org
-  url: http://getgrav.org
+  name: Devlom
+  email: info@devlom.com
+  url: https://devlom.com
 homepage: https://github.com/getgrav/grav-theme-hola
-demo: https://demo.getgrav.org/onepage-skeleton
-keywords: hola, spectre, theme, core, modern, fast, responsive, html5, css3
+demo: http://demo.devlom.com/grav/grav-theme-hola/
+keywords: hola, theme, styleshout, vcard, devlom, responsive, html5, css3
 bugs: https://github.com/getgrav/grav-theme-hola/issues
 license: MIT
 
@@ -31,23 +31,11 @@ form:
       validate:
         type: bool
 
-    grid-size:
-      type: select
-      label: Grid size
-      help: The maximum width of the theme
-      size: small
-      options:
-        '': None (full width)
-        grid-xl: Extra Large
-        grid-lg: Large
-        grid-md: Medium
-
     header_section:
       type: section
       title: Header Defaults
       underline: true
-
-
+      
     custom_logo:
       type: file
       label: Custom Logo
