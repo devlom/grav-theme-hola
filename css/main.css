@@ -4338,7 +4338,7 @@ font-size: 14px;
  }
 
  #services {
-	background: #ffffff url(../images/bg.jpg) no-repeat center;
+	background: #ffffff no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;

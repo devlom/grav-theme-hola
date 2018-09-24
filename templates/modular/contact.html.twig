@@ -1,50 +1,69 @@
-    <section id="contact" class="s-contact target-section">
+<section id="contact" class="s-contact target-section">
 
-        <div class="overlay"></div>
+    <div class="overlay"></div>
 
-        <div class="row narrow section-intro">
-            <div class="col-full">
-                <h3>{{ page.header.smallTitle }}</h3>
-                <h1>{{ page.title }}</h1>
-                
-                <p class="lead">{{ page.content|striptags }}</p>
-            </div>
+    <div class="row narrow section-intro">
+        <div class="col-full">
+            <h3>{{ page.header.smallTitle }}</h3>
+            <h1>{{ page.title }}</h1>
+
+            <p class="lead">{{ page.content|striptags }}</p>
         </div>
+    </div>
 
-        <div class="row contact__main">
-            <div class="col-eight tab-full contact__form">
-                <form name="contactForm" id="contactForm" method="post" action="">
+    <div class="row contact__main">
+        <div class="col-eight tab-full contact__form">
                 {% include "forms/form.html.twig" %}
-                </form>
-
-                <!-- contact-warning -->
-                <div class="message-warning">
-                    Something went wrong. Please try again.
-                </div> 
-            
-                <!-- contact-success -->
-                <div class="message-success">
-                    Your message was sent, thank you!<br>
-                </div>
-                        
+            <!-- contact-warning -->
+            <div class="message-warning">
+                Something went wrong. Please try again.
             </div>
-            <div class="col-four tab-full contact__infos">
-                <h4 class="h06">{{ header.phoneTitle }}</h4>
-                <p>{{ header.phonePhone }}<br>
+
+            <!-- contact-success -->
+            <div class="message-success">
+                Your message was sent, thank you!<br>
+            </div>
+
+        </div>
+        <div class="col-four tab-full contact__infos">
+            <h4 class="h06">{{ header.phoneTitle }}</h4>
+            <p>{{ header.phonePhone }}<br>
                 {{ header.phoneMobile }}<br>
                 {{ header.phoneFax }}
-                </p>
+            </p>
 
-                <h4 class="h06">{{ header.emailTitle }}</h4>
-                <p>{{ header.emailAddress|replace({',': '<br>'}) }}
-                </p>
+            <h4 class="h06">{{ header.emailTitle }}</h4>
+            <p>{{ header.emailAddress|replace({',': '<br>'}) }}
+            </p>
 
-                <h4 class="h06">{{ header.addressTitle }}</h4>
-                <p>
+            <h4 class="h06">{{ header.addressTitle }}</h4>
+            <p>
                 {{ header.addressDetails|markdown }}
-                </p>
-            </div>
-
+            </p>
         </div>
 
-    </section> <!-- end s-contact -->
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var form = $('#kontakt-ajax-form');
+            form.submit(function (e) {
+                // prevent form submission
+                e.preventDefault();
+                // submit the form via Ajax
+                $.ajax({
+                    url: form.attr('action'),
+                    type: form.attr('method'),
+                    dataType: 'html',
+                    data: form.serialize(),
+                    success: function (result) {
+                        // Inject the result in the HTML
+                        $('.message-success').html(result);
+                    }
+                });
+            });
+        });
+    </script>
+
+</section>
+<!-- end s-contact -->
