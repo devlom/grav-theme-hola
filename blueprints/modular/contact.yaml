@@ -24,6 +24,10 @@ form:
           title: Hola Settings
      
           fields:
+            sectionBackground:
+              type: section
+              title: Section Background
+              underline: true
             header.background:
               type: filepicker
               folder: '@self'

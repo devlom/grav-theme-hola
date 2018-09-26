@@ -3,7 +3,7 @@
     {% endmacro %}
     {% for module in theme_var('theme_menu') %}
         {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
-        {% if not module.header.hidemenu %}
+        {% if not module.header.visible %}
 
             {% if page.slug == 'home' and module.modular_link %}
                 <li class=" {{ current_module }} ">
