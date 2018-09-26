@@ -1,0 +1,52 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.smallTitle:
+              type: text
+              autofocus: true
+              style: vertical
+              label: Small Upper Title
+
+        holaSetings:
+          type: tab
+          title: Hola Settings
+
+          fields:
+            experience:
+              type: section
+              title: Experience
+              underline: true
+              fields:
+                header.expTitle:
+                  type: text
+                  style: vertical
+                  label: Experience Title
+                header.experienceTimeline:
+                  type: list
+                  label: Skills
+                  style: vertical
+                  fields:
+                    .date:
+                      type: text
+                      label: Job Date
+                    .client:
+                      type: text
+                      label: Client Name
+                    .position:
+                      type: text
+                      label: Job Position 
+                    .description:
+                      type: textarea
+                      label: Jobe Description

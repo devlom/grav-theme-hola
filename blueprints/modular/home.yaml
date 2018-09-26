@@ -10,6 +10,23 @@ form:
           title: Hola Settings
 
           fields:
+            bannerBackground:
+              type: section
+              title: Banner Background
+              underline: true
+            header.background:
+                type: filepicker
+                folder: '@self'
+                label: Select Banner Background
+                preview_images: true
+                accept:
+                  - .png
+                  - .jpg
+            
+            buttons:
+              type: section
+              title: Buttons Section
+              underline: true
 
             header.button1Text:
               type: text
