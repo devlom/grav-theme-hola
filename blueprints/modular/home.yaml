@@ -22,7 +22,11 @@ form:
                 accept:
                   - .png
                   - .jpg
-            
+            header.bannerOpacity:
+                type: text
+                label: Overlay Opacity
+                description: Please use value between 0 and 1.
+              
             buttons:
               type: section
               title: Buttons Section

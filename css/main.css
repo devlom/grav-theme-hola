@@ -1749,7 +1749,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .5;
     background-color: #111111;
 }
 
@@ -2658,7 +2657,6 @@ html.no-csstransitions .home-content__main {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .85;
     background-color: #0D0A0B;
 }
 
@@ -3068,7 +3066,6 @@ html.no-csstransitions .home-content__main {
 
 .s-contact {
     background-color: #151515;
-    background-image: url("../images/contact-bg.jpg");
     background-repeat: no-repeat;
     background-position: center, center;
     padding-top: 13.2rem;
@@ -3083,7 +3080,6 @@ html.no-csstransitions .home-content__main {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: .75;
     background-color: #070606;
 }
 

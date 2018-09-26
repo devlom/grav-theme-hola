@@ -14,7 +14,19 @@ form:
           title: Hola Settings
 
           fields:
-            portfolioSection:
+            header.section.background:
+              type: filepicker
+              folder: '@self'
+              label: Select Section Background
+              preview_images: true
+              accept:
+                - .png
+                - .jpg
+            header.backgroundOverlay:
+              type: text
+              label: Overlay Opacity
+              description: Please use value between 0 and 1.
+            testimonialSection:
               type: section
               title: Testimonials
               underline: true

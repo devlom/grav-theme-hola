@@ -22,14 +22,24 @@ form:
         holaSetings:
           type: tab
           title: Hola Settings
-
+     
           fields:
+            header.background:
+              type: filepicker
+              folder: '@self'
+              label: Select Background
+              preview_images: true
+              accept:
+                - .png
+                - .jpg
+            header.opacity:
+                type: text
+                label: Overlay Opacity
+                description: Please use value between 0 and 1.
             phoneSection:
               type: section
               title: Phone
               underline: true
-            
-            
             header.phoneTitle:
               type: text
               label: Phone Section Title
