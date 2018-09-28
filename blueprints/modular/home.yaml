@@ -18,6 +18,7 @@ form:
                 type: filepicker
                 folder: '@self'
                 label: Select Banner Background
+                description: Best Experience With Dimensions - 3000x2000px.
                 preview_images: true
                 accept:
                   - .png
