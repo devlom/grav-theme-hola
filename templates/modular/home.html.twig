@@ -1,4 +1,4 @@
- <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{ page.media[page.header.background].url() }}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+ <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{ page.media[page.header.background].url() }}" data-position-y=center>
 
         <div class="overlay" style="opacity:{{page.header.bannerOpacity}};"></div>
         <div class="shadow-overlay"></div>
@@ -17,14 +17,14 @@
                     <a href="{{ page.header.button1Link }}" class="smoothscroll btn btn--stroke">
                         {{ page.header.button1Text }}
                     </a>
-                    <a href="#about" class="smoothscroll btn btn--stroke">
-                        More About Me
+                    <a href="{{ page.header.button2Link }}" class="smoothscroll btn btn--stroke">
+                        {{ page.header.button2Text }}
                     </a>
                 </div>
 
                 <div class="home-content__scroll">
-                    <a href="{{ page.header.button2Link }}" class="scroll-link smoothscroll">
-                        <span>{{ page.header.button2Text }}</span>
+                    <a href="{{ page.header.button3Link }}" class="scroll-link smoothscroll">
+                        <span>{{ page.header.button3Text }}</span>
                     </a>
                 </div>
 

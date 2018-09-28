@@ -48,6 +48,14 @@ form:
               type: text
               label: Second Button Text
             
+            header.button3Text:
+              type: text
+              label: Scroll Link Text
+
+            header.button3Link:
+              type: text
+              label: Scroll Link Text
+            
             social:
               type: section
               title: Social Icons
