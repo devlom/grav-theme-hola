@@ -11,7 +11,7 @@ spectre:
   exp: false
   icons: false
 custom_logo:
-  user/themes/hola/images/logo/logo.png:
+    user/themes/hola/images/logo/logo.png:
     name: logo.png
     type: image/png
     size: 5238

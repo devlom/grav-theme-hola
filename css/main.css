@@ -1491,6 +1491,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .s-header.sticky .header-logo a {
     margin: 0;
 }
+.s-header.sticky .header-logo img {
+    max-height: 62px;
+}
 
 .s-header.sticky .header-nav-wrap {
     top: 0;
@@ -1521,13 +1524,16 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-logo a {
     display: block;
-    margin: 9px 0 0 0;
-    padding: 0;
+    margin: 12px 0 0;
+    padding: 12px 0 0px;
     outline: 0;
     border: none;
-    width: 80px;
+    max-width: 90px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+.header-logo img {
+    max-height: 72px;
 }
 
 
