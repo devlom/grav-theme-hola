@@ -1,0 +1,47 @@
+extends@: default
+
+form:
+  fields:
+    
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+
+          fields:
+            header.smallTitle:
+              type: text
+              autofocus: true
+              style: vertical
+              label: Small Upper Title
+
+        holaSetings:
+            type: tab
+            title: Hola Settings
+
+            fields:
+              leftText:
+                type: section
+                title: Text Section
+                underline: true
+                fields:
+                  header.firstColumnTitle:
+                    type: text
+                    label: First Column Title 
+                  
+                  header.firstColumnContent:
+                    type: textarea
+                    label: First Column Content
+                  header.secondColumnTitle:
+                    type: text
+                    label: Second Column Title 
+                  
+                  header.secondColumnContent:
+                    type: textarea
+                    label: Second Column Content
+
+
