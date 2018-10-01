@@ -71,30 +71,5 @@ form:
                     header.button2Link:
                       type: text
                       label: Second Button Text
-                experience:
-                  type: section
-                  title: Experience
-                  underline: true
-                  fields:
-                    header.expTitle:
-                      type: text
-                      style: vertical
-                      label: Experience Title
-                    header.experienceTimeline:
-                      type: list
-                      label: Skills
-                      style: vertical
-                      fields:
-                        .date:
-                          type: text
-                          label: Job Date
-                        .client:
-                          type: text
-                          label: Client Name
-                        .position:
-                          type: text
-                          label: Job Position 
-                        .description:
-                          type: textarea
-                          label: Jobe Description
+
 

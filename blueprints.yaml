@@ -141,6 +141,9 @@ form:
     footer-design:
       type: text
       label: About Design And Project Description
+    footer-additional-text:
+      type: text
+      label: Additional Text Beneath Footer Copyright Text
     footer-social:
       type: list
       label: Social icons 

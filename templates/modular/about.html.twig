@@ -1,4 +1,4 @@
-<section id="about" class="s-about target-section">
+<section id="{{page.header.menu|lower}}" class="s-about target-section">
     <div class="row narrow section-intro has-bottom-sep">
         <div class="col-full text-center">
             <h3>{{ page.header.smallTitle }}</h3>
@@ -46,34 +46,6 @@
 
     </div>
     <!-- end about-content buttons -->
-
-    <div class="row about-content about-content--timeline">
-
-        <div class="col-full text-center">
-            <h3>{{ page.header.expTitle }}</h3>
-        </div>
-        {% for item in page.header.experienceTimeline %}
-            <div class="col-six tab-full {% if item is odd %}left{% else %}right{% endif %}">
-                <div class="timeline">
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">{{ item.date }}</p>
-                            <h3>{{ item.client }}</h3>
-                            <h5>{{ item.position }}</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <p>{{ item.description }}</p>
-                        </div>
-                    </div>
-                    <!-- end timeline__block -->
-                </div>
-                <!-- end timeline -->
-            </div>
-            <!-- end left -->
-        {% endfor %}
-    </div>
-    <!-- end about-content timeline -->
 
 </section>
 <!-- end about -->

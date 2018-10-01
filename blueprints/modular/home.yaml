@@ -10,6 +10,28 @@ form:
           title: Hola Settings
 
           fields:
+            bannerBackground:
+              type: section
+              title: Banner Background
+              underline: true
+            header.background:
+                type: filepicker
+                folder: '@self'
+                label: Select Banner Background
+                description: Best Experience With Dimensions - 3000x2000px.
+                preview_images: true
+                accept:
+                  - .png
+                  - .jpg
+            header.bannerOpacity:
+                type: text
+                label: Overlay Opacity
+                description: Please use value between 0 and 1.
+              
+            buttons:
+              type: section
+              title: Buttons Section
+              underline: true
 
             header.button1Text:
               type: text
@@ -26,6 +48,14 @@ form:
             header.button2Link:
               type: text
               label: Second Button Text
+            
+            header.button3Text:
+              type: text
+              label: Scroll Link Text
+
+            header.button3Link:
+              type: text
+              label: Scroll Link Text
             
             social:
               type: section
