@@ -1,4 +1,4 @@
- <section id="{{page.header.menu|lower}}" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{ page.media[page.header.background].url() }}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+ <section id="{{page.template|lower|split('/')|last}}" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{ page.media[page.header.background].url() }}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay" style="opacity:{{page.header.bannerOpacity}};"></div>
         <div class="shadow-overlay"></div>

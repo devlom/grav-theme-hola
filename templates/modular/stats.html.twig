@@ -1,7 +1,7 @@
 
     <!-- s-stats
     ================================================== -->
-    <section id="{{page.header.menu|lower}}" class="s-stats">
+    <section id="{{page.template|lower|split('/')|last}}" class="s-stats target-section">
         <div class="row block-1-4 block-tab-1-2 block-mob-full stats">
         
         {% for item in page.header.stats %}
