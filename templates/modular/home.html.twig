@@ -14,12 +14,16 @@
                 </h1>
 
                 <div class="home-content__buttons">
+                {% if page.header.button1Text %}                
                     <a href="{{ page.header.button1Link }}" class="smoothscroll btn btn--stroke">
                         {{ page.header.button1Text }}
                     </a>
+                  {% endif %}
+                  {% if page.header.button2Text %}                
                     <a href="{{ page.header.button2Link }}" class="smoothscroll btn btn--stroke">
                         {{ page.header.button2Text }}
                     </a>
+                    {% endif %}
                 </div>
 
                 <div class="home-content__scroll">
