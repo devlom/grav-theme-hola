@@ -1,31 +1,65 @@
+{% macro loop(page) %}
+    {% for p in page.children.visible %}
+        {% set current_page = (p.active or p.activeChild) ? 'current' : '' %}
+        {% if p.children.visible.count > 0 %}
+            <li class="has-children {{ current_page }}">
+                <a href="{{ p.url }}">
+                    {% if p.header.icon %}
+                        <i class="fa fa-{{ p.header.icon }}"></i>
+                    {% endif %}
+                    {{ p.menu }}
+                    <span></span>
+                </a>
+                <ul>
+                    {{ _self.loop(p) }}
+            </ul>
+        </li>
+    {% else %}
+        <li class="{{ current_page }}">
+            <a href="{{ p.url }}">
+                {% if p.header.icon %}
+                    <i class="fa fa-{{ p.header.icon }}"></i>
+                {% endif %}
+                {{ p.menu }}
+            </a>
+        </li>
+    {% endif %}
+{% endfor %}
+{% endmacro %}
 <ul class="header-nav">
-    {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'})}}
-    {% endmacro %}
-    {% for module in page.collection() %}
-       
-        {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
-
-        {% if module.header.visible %}
-         
-            {% if page.slug == 'home' and module.modular_link %}
-                <li class=" {{ current_module }} ">
-                    <a class="smoothscroll" href="#{{module.modular_link}}">{{ module.item_name }}</a>
-                </li>
-            {% elseif page.slug == 'home' and not module.modular_link %}
-                <li class=" {{ current_module }} ">
-                    <a class="smoothscroll" href="#{{ (module.menu) }}">{{ module.menu }}</a>
-                </li>
-               
-            {% else %}
-            
-                    <li class=" {{ current_module }} ">
-                        <a class="smoothscroll" href="#">{{ module.item_name }}
-                        </a>
-                    </li>
-               
-            {% endif %}
-
+{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'})}}
+{% endmacro %}
+{% set home = page.find('/') %}
+{% for module in home.collection %}
+    {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
+    {% if module.header.visible %}
+        {% if page.slug == 'home' and module.modular_link %}
+            <li class=" {{ current_module }} ">
+                <a class="smoothscroll" href="#{{module.modular_link}}">{{ module.item_name }}</a>
+            </li>
+        {% elseif page.slug == 'home' and not module.modular_link %}
+            <li class=" {{ current_module }} ">
+                <a class="smoothscroll" href="#{{ (module.menu) }}">{{ module.menu }}</a>
+            </li>
+        {% else %}
+            <li class=" {{ current_module }} ">
+                <a href="{{ base_url_relative }}#{{ module.menu }}">
+                    {{ module.menu }}
+                </a>
+            </li>
         {% endif %}
-    {% endfor %}
+    {% endif %}
+{% endfor %}
+
+{% for page in pages.children.visible %}
+    {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
+    <li class="{{ current_page }}">
+        <a href="{{ page.url }}">
+            {% if page.header.icon %}
+                <i class="fa fa-{{ page.header.icon }}"></i>
+            {% endif %}
+            {{ page.menu }}
+        </a>
+    </li>
+{% endfor %}
 </ul>
- {{ dump(page.collection) }}
