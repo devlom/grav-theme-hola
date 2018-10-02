@@ -151,4 +151,4 @@ Custom Background Color: # Allows user to enter custom background class
 And much more...
 Please enjoy! 
 
-~_Devlom Team_ ~ 
+~ _Devlom Team_ ~ 
