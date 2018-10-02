@@ -1,34 +1,31 @@
 <ul class="header-nav">
     {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'})}}
     {% endmacro %}
-    {% for module in theme_var('theme_menu') %}
+    {% for module in page.collection() %}
+       
         {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
-        {% if not module.header.visible %}
 
+        {% if module.header.visible %}
+         
             {% if page.slug == 'home' and module.modular_link %}
                 <li class=" {{ current_module }} ">
                     <a class="smoothscroll" href="#{{module.modular_link}}">{{ module.item_name }}</a>
                 </li>
             {% elseif page.slug == 'home' and not module.modular_link %}
                 <li class=" {{ current_module }} ">
-                    <a href="{{ page.find(module.subpage_link).url() }}">{{ module.item_name }}</a>
+                    <a class="smoothscroll" href="#{{ (module.menu) }}">{{ module.menu }}</a>
                 </li>
+               
             {% else %}
-
-                {% if module.modular_link %}
+            
                     <li class=" {{ current_module }} ">
-                        <a href="{{ base_url_relative }}/#{{module.modular_link}}">{{ module.item_name }}
+                        <a class="smoothscroll" href="#">{{ module.item_name }}
                         </a>
                     </li>
-                {% else %}
-                   
-                    
-                    <li class=" {% if page.find(module.subpage_link).url() == page.url() or page.find(module.subpage_link).url() == page.parent.url()  %}current{% endif %} ">
-                        <a href="{{ page.find(module.subpage_link).url() }}">{{ module.item_name }}</a>
-                    </li>
-                {% endif %}
+               
             {% endif %}
 
         {% endif %}
     {% endfor %}
 </ul>
+ {{ dump(page.collection) }}

@@ -9,7 +9,7 @@ form:
           type: tab
           title: Hola Settings
 
-          fields:
+          fields:  
             bannerBackground:
               type: section
               title: Banner Background

@@ -24,6 +24,14 @@ form:
           title: Hola Settings
 
           fields:
+            background:
+              type: section
+              title: Section Background Color
+              underline: true
+            header.sectionBackground:
+              type: selectize
+              label: Addition Section Background Class
+              description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty. 
             serviceSection:
               type: section
               title: Services

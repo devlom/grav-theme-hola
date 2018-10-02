@@ -7,16 +7,20 @@
 ## Features
 
 * HTML5 and CSS3
-* Fully responsive
+* Fully responsive layout
 * Modern, stylish design
 * Easy to customize
-* Hundreds of icon fonts
+* Hundreds of icons avaliable
 * Multiple page template types
 * Retina ready
+* Smooth scrolling home page nav 
 * Stylish portfolio section
 * Animated stats section
 * @font-face custom web fonts
+* Parallax type sections included
 * Compatible with all major browsers
+
+![](hola-mobile.jpg)
 
 ### Supported Page Templates
 
@@ -25,9 +29,18 @@
 * Blog view template `blog.md`
 * Blog item view template `item.md`
 * Modular view templates: `modular.md`
-  * Features Modular view template `features.md`
-  * Hero Modular view template `hero.md`
-  * Text Modular view template `text.md`
+  * Home Banner Modular view template - `home.md`
+  * About Modular view template - `about.md`
+  * Experience Modular view template - `experience.md`
+  * Portfolio Modular view template - `works.md`
+  * Services Modular view template - `services.md`
+  * Testimonials Modular view template - `testimonials.md`
+  * Resume Modular view template - `resume.md`
+  * Blog Modular view template - `blog.md`
+  * Call To Action Modular view template - `cta.md`
+  * Stats Modular view template - `stats.md`
+  * Basic One or Two Column Text Modular view template - `basic.md`
+
 
 # Installation
 
@@ -58,7 +71,6 @@ Hola comes with a few default options that can be set site-wide.  These options 
 ```yaml
 enabled: true                 # Enable the theme
 production-mode: true         # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
-grid-size: grid-lg            # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
 header-fixed: true            # Cause the header to be fixed at the top of the browser
 header-animated: true         # Allows the fixed header to resize to a smaller header when scrolled
 header-dark: false            # Inverts the text/logo to work better on dark backgrounds
@@ -96,29 +108,6 @@ body_classes: "header-dark header-transparent"
 
 On a particular page will ensure that page has those options enabled (assuming they are false by default).
 
-## Hero Options
-
-The hero template allows some options to be set in the page frontmatter. This is used by the modular `hero` as well as the blog and item templates to provide a more dynamic header.
-
-```yaml
-hero_classes: text-light title-h1h2 parallax overlay-dark-gradient hero-large
-hero_image: road.jpg
-hero_align: center
-```
-
-The `hero_classes` option allows a variety of hero classes to be set dynamically these include:
-
-* `text-light` | `text-dark` - Controls if the text should be light or dark depending on the content
-* `title-h1h2` - Enforced a close matched h1/h2 title pairing
-* `parallax` - Enables a CSS-powered parallax effect
-* `overlay-dark-gradient` - Displays a transparent gradient which further darkens the underlying image
-* `overlay-light-gradient` - Displays a transparent gradient which further lightens the underlying image
-* `overlay-dark` - Displays a solid transparent overlay which further darkens the underlying image
-* `overlay-light` - Displays a solid transparent overlay which further darkens the underlying image
-* `hero-fullscreen` | `hero-large` | `hero-medium` | `hero-small` | `hero-tiny` - Size of the hero block
-
-The `hero_image` should point to an image file in the current page folder.
-
 ## Features Modular Options
 
 The features modular template provides the ability to set a class on the features, as well as an array of feature items.  For example:
@@ -146,11 +135,20 @@ features:
       icon: money 
 ```
 
-## Text Modular Options
+## Modular Hola Settings
 
-The text box provides a single option to control if any image found in the page folder should be left or right aligned:
+Additional options found in every modular section. It can be used to unlock additional functions such as:
 
 ```yaml
-image_align: right
+Banner Background:       # Allows user to pick custom banner background
+Overlay Opacity:         # Gives user control over banner overlay opacity
+Button Link:             # Allows user to enter cutom buton link
+Icon Picker:             # User can pick desired icon from available set
+Skill Procentage:        # Couses the skill chart to be lenghten to entered value
+Custom Background Color: # Allows user to enter custom background class
 ```
 
+And much more...
+Please enjoy! 
+
+~_Devlom Team_ ~ 

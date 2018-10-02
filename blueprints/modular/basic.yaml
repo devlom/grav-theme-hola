@@ -24,24 +24,35 @@ form:
             title: Hola Settings
 
             fields:
+              background:
+                type: section
+                title: Section Background Color
+                underline: true
+              header.sectionBackground:
+                type: selectize
+                label: Addition Section Background Class
+                description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty. 
               leftText:
                 type: section
                 title: Text Section
                 underline: true
                 fields:
-                  header.firstColumnTitle:
-                    type: text
-                    label: First Column Title 
-                  
-                  header.firstColumnContent:
-                    type: textarea
-                    label: First Column Content
-                  header.secondColumnTitle:
-                    type: text
-                    label: Second Column Title 
-                  
-                  header.secondColumnContent:
-                    type: textarea
-                    label: Second Column Content
+                  header.row: 
+                    type: list
+                    label: Text Row
+                    fields:
+                      .firstColumnTitle:
+                        type: text
+                        label: First Column Title         
+                      .firstColumnContent:
+                        type: textarea
+                        label: First Column Content
+                        description: If using only one column please leave second column fields empty.
+                      .secondColumnTitle:
+                        type: text
+                        label: Second Column Title 
+                      .secondColumnContent:
+                        type: textarea
+                        label: Second Column Content
 
 

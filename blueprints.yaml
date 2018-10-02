@@ -95,28 +95,6 @@ form:
       validate:
         type: bool
 
-    menu:
-      type: section
-      title: Theme Menu
-      underline: true
-    
-    theme_menu:
-      type: list
-      label: Theme Menu
-      description: Specify Links In Menu
-      fields:
-        .item_name:
-          type: text
-          label: Menu Item Name
-        .modular_link:
-          type: text
-          label: Modular Page Link(Section)
-        .subpage_link:
-          type: pages
-          label: Regular Page Link
-
-          
-
     footer_section:
       type: section
       title: Footer Defaults

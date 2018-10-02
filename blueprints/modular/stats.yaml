@@ -9,7 +9,15 @@ form:
           type: tab
           title: Hola Settings
 
-          fields:            
+          fields:
+            background:
+              type: section
+              title: Section Background Color
+              underline: true
+            header.sectionBackground:
+              type: selectize
+              label: Addition Section Background Class
+              description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty.             
             stats:
               type: section
               title: Statystic section
