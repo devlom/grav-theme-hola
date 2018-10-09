@@ -1,5 +1,4 @@
 enabled: true
-blog-page: /blog
 custom_logo:
     user/themes/hola/images/logo/logo.png:
     name: logo.png
@@ -29,6 +28,3 @@ footer-social:
     socialIconClass: 'fa fa-pinterest'
     socialIconText: Pinterest
     socialIconLink: '#0'
-item_name: Contact
-modular_link: '../#contact'
-subpage_link: /home
