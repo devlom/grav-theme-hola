@@ -32,14 +32,17 @@
 {% set home = page.find('/') %}
 {% for module in home.collection %}
     {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
+    
+        {{ dump(module.redirect) }}
+    
     {% if module.header.visible %}
         {% if page.slug == 'home' and module.modular_link %}
             <li class=" {{ current_module }} ">
-                <a class="smoothscroll" href="#{{module.modular_link}}">{{ module.item_name }}</a>
+                <a class="smoothscroll" href="#{% if module.redirect %}{{module.redirect}} {% else %}{{module.modular_link}}{% endif %}">{{ module.item_name }}</a>
             </li>
         {% elseif page.slug == 'home' and not module.modular_link %}
             <li class=" {{ current_module }} ">
-                <a class="smoothscroll" href="#{{ (module.menu) }}">{{ module.menu }}</a>
+                <a class="smoothscroll" href="#{% if module.redirect %}{{module.redirect}} {% else %}{{ (module.menu) }}{% endif %}">{{ module.menu }}</a>
             </li>
         {% else %}
             <li class=" {{ current_module }} ">

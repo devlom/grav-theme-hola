@@ -1,6 +1,6 @@
 <!-- resume Section
    ================================================== -->
-	<section id="{{page.menu|lower}}" class="s-resume {{ page.header.sectionBackground }} target-section">
+	<section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-resume {{ page.header.sectionBackground }} target-section">
 
 		<div class="row section-intro">
    		<div class="col-twelve">

@@ -1,6 +1,6 @@
 <!-- testimonials
     ================================================== -->
-    <section id="{{page.menu|lower}}" class="s-testimonials {{ page.header.sectionBackground }} target-section">
+    <section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-testimonials {{ page.header.sectionBackground }} target-section">
 
         <div class="overlay" style="opacity:{{page.header.backgroundOverlay}};"></div>
 

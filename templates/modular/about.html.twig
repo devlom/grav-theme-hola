@@ -1,4 +1,4 @@
-<section id="{{page.menu|lower}}" class="s-about {{ page.header.sectionBackground }} target-section">
+<section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-about {{ page.header.sectionBackground }} target-section">
     <div class="row narrow section-intro has-bottom-sep">
         <div class="col-full text-center">
             <h3>{{ page.header.smallTitle }}</h3>
