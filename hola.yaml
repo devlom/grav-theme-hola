@@ -28,3 +28,4 @@ footer-social:
     socialIconClass: 'fa fa-pinterest'
     socialIconText: Pinterest
     socialIconLink: '#0'
+footer-additional-text: 'Porting this template to GRAV was made possible with support of <a href="https://davidhagenauer.com/">davidhagenauer.com</a>.'
