@@ -2,7 +2,7 @@
 
 ![](hola.jpg)
 
-**Hola** modern and stylish vCard website template for [Grav CMS](http://github.com/getgrav/grav).  Designed to be a resume, vCard, portfolio template, it’s the perfect template for creative designers, developers, freelancers, photographer or any creative profession. It is fully responsive and retina/hi-dpi ready. It will look great on any devices from desktop to mobile phones. It has blog page templates, working contact form, stylish portfolio section and other features you will only find on premium templates. Built with clean and organized code, this template is also very easy to customize.
+**Hola** modern and stylish vCard website template for [Grav CMS](http://github.com/getgrav/grav), originally designed by [styleshout](https://www.styleshout.com/).  Designed to be a resume, vCard, portfolio template, it’s the perfect template for creative designers, developers, freelancers, photographer or any creative profession. It is fully responsive and retina/hi-dpi ready. It will look great on any devices from desktop to mobile phones. It has blog page templates, working contact form, stylish portfolio section and other features you will only find on premium templates. Built with clean and organized code, this template is also very easy to customize.
 
 ## Features
 
@@ -88,7 +88,7 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Hola t
 
 ## Sources and Credits
 
-[Author](https://www.styleshout.com) of the theme used the following resources as listed.
+Hola theme was originally designed by [styleshout](https://www.styleshout.com/) using the following resources as listed:
 
 Fonts:
  - Montserrat Font (https://www.google.com/fonts/specimen/Montserrat)
@@ -117,3 +117,5 @@ Javascript Files:
 Other: 
 - Porting this template to GRAV was made possible with support of [davidhagenauer.com](http://davidhagenauer.com). Make sure to send cake!
 - Conversion to Grav was handled by [Devlom](https://devlom.com) team.
+
+Please take particular note of Styleshout's [licensing policy](http://www.styleshout.com/about-us/#remove-link) before removing any credits from the template.
