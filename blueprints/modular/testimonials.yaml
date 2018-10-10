@@ -20,7 +20,7 @@ form:
               underline: true
             header.sectionBackground:
               type: selectize
-              label: Addition Section Background Class
+              label: Additional Section Background Class
               description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty. 
             sectionBackground:
               type: section
@@ -50,18 +50,18 @@ form:
                     .image:
                       type: filepicker
                       folder: '@self'
-                      label: Select Client Photo
+                      label: Photo
                       preview_images: true
                       accept:
                         - .png
                         - .jpg
                     .clientName:
                       type: text
-                      label: Client Name
+                      label: Name
                     .position:
                       type: text
-                      label: Client Company Position
+                      label: Position
                     .description:
                       type: textarea
-                      label: Testimonial Content
+                      label: Content
                   

@@ -30,7 +30,7 @@ form:
               underline: true
             header.sectionBackground:
               type: selectize
-              label: Addition Section Background Class
+              label: Additional Section Background Class
               description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty. 
 
             timelineSection:
@@ -53,19 +53,19 @@ form:
                   fields:    
                     .position:
                       type: text
-                      label: Timeline Item Position
+                      label: Position
                     .date:
                       type: text
-                      label: Timeline Item Date
+                      label: Date
                     .icon_class:
                       type: iconpicker
                       label: Icon Class
                     .title:
                       type: text
-                      label: Timeline Item
+                      label: Item
                     .descripiton:
                       type: textarea
-                      label: Timeline Description
+                      label: Description
                   
 
                 

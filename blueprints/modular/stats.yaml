@@ -16,32 +16,32 @@ form:
               underline: true
             header.sectionBackground:
               type: selectize
-              label: Addition Section Background Class
+              label: Additional Section Background Class
               description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty.             
             stats:
               type: section
-              title: Statystic section
-              text: 'Enter Statystic Elements, icons bank: https://fontawesome.com/v4.7.0/icons/'
+              title: Statistics
+              text: 'Enter statistics Elements, icons bank: https://fontawesome.com/v4.7.0/icons/'
               underline: true
               fields:
                 header.stats:
                   type: list
-                  label: Statystics 
+                  label: Statistics 
                   style: vertical
                   fields:
                     .statCount:
                       type: text
-                      label: Enter Statistic Number
+                      label: Number
                     .statDescription:
                       type: text
-                      label: Enter Statistic Description
+                      label: Description
                     .statIconClass:
                       type: iconpicker
-                      label: Statistic Custom Icon
+                      label: Custom Icon
                       description: 'You can use classes: im-arrow-up/im-arrow-down '
                     .statIconLink:
                       type: text
-                      label: Icon External Link
+                      label: External Link
                     .statHighlight:
                       type: toggle
                       highlight: 1

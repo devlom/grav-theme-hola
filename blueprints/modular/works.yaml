@@ -30,7 +30,7 @@ form:
               underline: true
             header.sectionBackground:
               type: selectize
-              label: Addition Section Background Class
+              label: Additional Section Background Class
               description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty. 
             portfolioSection:
               type: section
@@ -52,16 +52,16 @@ form:
                         - .jpg
                     .title:
                       type: text
-                      label: Portfolio Item Title
+                      label: Title
                     .category:
                       type: selectize
-                      label: Portfolio Item Category
+                      label: Category
                     .link:
                       type: text
-                      label: Portfolio Item Link
+                      label: Link
                     .description:
                       type: textarea
-                      label: Portfolio Item Description
+                      label: Description
                     .imageSize1:
                       type: filepicker
                       folder: '@self'

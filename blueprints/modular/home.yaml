@@ -70,13 +70,13 @@ form:
                   fields:
                     .socialIconClass:
                       type: iconpicker
-                      label: Pick Desired Icon
+                      label: Icon Class
                     .socialIconText:
                       type: text
-                      label: Enter Icon Name
+                      label: Icon Name
                     .socialIconLink:
                       type: text
-                      label: Enter Social Icon Link
+                      label: Url
               
             
             

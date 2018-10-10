@@ -30,7 +30,7 @@ form:
               underline: true
             header.sectionBackground:
               type: selectize
-              label: Addition Section Background Class
+              label: Additional Section Background Class
               description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty. 
             experience:
               type: section
@@ -43,18 +43,18 @@ form:
                   label: Experience Title
                 header.experienceTimeline:
                   type: list
-                  label: Skills
+                  label: Timeline
                   style: vertical
                   fields:
                     .date:
                       type: text
-                      label: Job Date
+                      label: Date
                     .client:
                       type: text
                       label: Client Name
                     .position:
                       type: text
-                      label: Job Position 
+                      label: Position 
                     .description:
                       type: textarea
-                      label: Jobe Description
+                      label: Job Description
