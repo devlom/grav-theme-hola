@@ -2,7 +2,7 @@
 
 ![](hola.jpg)
 
-**Hola** modern and stylish vCard website template for [Grav CMS](http://github.com/getgrav/grav), originally designed by [styleshout](https://www.styleshout.com/).  Designed to be a resume, vCard, portfolio template, it’s the perfect template for creative designers, developers, freelancers, photographer or any creative profession. It is fully responsive and retina/hi-dpi ready. It will look great on any devices from desktop to mobile phones. It has blog page templates, working contact form, stylish portfolio section and other features you will only find on premium templates. Built with clean and organized code, this template is also very easy to customize.
+**Hola** modern and stylish vCard website template for [Grav CMS](http://github.com/getgrav/grav), originally made by [styleshout](https://www.styleshout.com/).  Designed to be a resume, vCard, portfolio template, it’s the perfect template for creative designers, developers, freelancers, photographer or any creative profession. It is fully responsive and retina/hi-dpi ready. It will look great on any devices from desktop to mobile phones. It has blog page templates, working contact form, stylish portfolio section and other features you will only find on premium templates. Built with clean and organized code, this template is also very easy to customize.
 
 ## Features
 
