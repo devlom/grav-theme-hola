@@ -46,19 +46,19 @@ form:
               underline: true
             header.phoneTitle:
               type: text
-              label: Phone Section Title
+              label: Section Title
             header.phonePhone:
               type: text
-              label: Phone Number
+              label: Number
             header.phoneMobile:
               type: text
               label: Mobile Number
             header.phoneFax:
               type: text
-              label: Phone FAX Number
+              label: FAX Number
             header.emailTitle:
               type: text
-              label: Email Section Title
+              label: Email Title
             header.emailAddress:
               type: selectize
               label: Email Address

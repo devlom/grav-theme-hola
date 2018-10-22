@@ -30,7 +30,7 @@ form:
                   underline: true
                 header.sectionBackground:
                   type: selectize
-                  label: Addition Section Background Class
+                  label: Additional Section Background Class
                   description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty. 
                 leftText:
                   type: section
@@ -60,10 +60,10 @@ form:
                       fields:
                         .skillName:
                           type: text
-                          label: Skill Name
+                          label: Name
                         .percentValue:
                           type: text
-                          label: Skill Progress Percentage
+                          label: Progress Percentage
                     header.button1Text:
                       type: text
                       label: First Button Text

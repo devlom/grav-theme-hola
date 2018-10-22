@@ -30,7 +30,7 @@ form:
               underline: true
             header.sectionBackground:
               type: selectize
-              label: Addition Section Background Class
+              label: Additional Section Background Class
               description: For Gray Background Please Use Class 'grey-section' for White Background leave field empty. 
             serviceSection:
               type: section
@@ -44,10 +44,10 @@ form:
               fields:
                 .icon:
                   type: iconpicker
-                  label: Service Icon
+                  label: Icon
                 .title:
                   type: text
-                  label: Service Title
+                  label: Title
                 .description:
                   type: textarea
-                  label: Service Description
+                  label: Description

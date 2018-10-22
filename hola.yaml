@@ -1,22 +1,21 @@
 enabled: true
-blog-page: /blog
 custom_logo:
-    user/themes/hola/images/logo/logo.png:
+  user/themes/hola/images/logo/logo.png:
     name: logo.png
     type: image/png
     size: 5238
     path: user/themes/hola/images/logo/logo.png
 footer-text: '© Copyright Hola 2018'
-footer-design: 'Design by <a href="https://www.styleshout.com/">styleshout</a>'
+footer-design: 'Design by <a href="https://www.styleshout.com/">styleshout</a>, GRAV conversion by <a href="https://devlom.com/">Devlom</a>'
 footer-social:
   -
     socialIconClass: 'fa fa-facebook-square'
     socialIconText: Facebook
-    socialIconLink: '#0'
+    socialIconLink: 'https://www.facebook.com/devlom'
   -
     socialIconClass: 'fa fa-twitter'
     socialIconText: Twitter
-    socialIconLink: '#0'
+    socialIconLink: 'https://twitter.com/devlomthemes'
   -
     socialIconClass: 'fa fa-instagram'
     socialIconText: Instagram
@@ -29,6 +28,4 @@ footer-social:
     socialIconClass: 'fa fa-pinterest'
     socialIconText: Pinterest
     socialIconLink: '#0'
-item_name: Contact
-modular_link: '../#contact'
-subpage_link: /home
+footer-additional-text: 'Porting this template to GRAV was made possible with support of <a href="https://davidhagenauer.com/">davidhagenauer.com</a>.'
