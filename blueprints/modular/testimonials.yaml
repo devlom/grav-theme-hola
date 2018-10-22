@@ -26,7 +26,7 @@ form:
               type: section
               title: Section Background
               underline: true
-            header.section.background:
+            header.sectionbackground:
               type: filepicker
               folder: '@self'
               label: Select Section Background
