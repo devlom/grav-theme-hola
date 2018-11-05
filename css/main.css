@@ -3920,7 +3920,8 @@ article.blog-single .blog-content {
 
 .blog-content__main img {
     max-width: 1000px;
-    margin: 3rem 0 3rem -6rem;
+    margin: 3rem 1rem 3rem 0;
+    display: inline-block;
 }
 
 

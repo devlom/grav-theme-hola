@@ -2,10 +2,12 @@
 <div class="overlay"></div>	
 <div class="row section-intro">
    		<div class="col-twelve">
-
+			{% if page.header.smallTitle %}
    			<h3>{{ page.header.smallTitle}}</h3>
+			   {% endif %}
+			  {% if page.title %}
    			<h1>{{ page.title }}</h1>
-
+			   {% endif %}
    			<p class="lead">{{ page.description }}</p>
 
    		</div>   		
