@@ -1,48 +1,53 @@
- <section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{ page.media[page.header.background].url() }}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+<section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{ page.media[page.header.background].url() }}" data-natural-width="3000" data-natural-height="2000" data-position-y="center">
 
-        <div class="overlay" style="opacity:{{page.header.bannerOpacity}};"></div>
-        <div class="shadow-overlay"></div>
+    <div class="overlay" style="opacity:{{page.header.bannerOpacity}};"></div>
+    <div class="shadow-overlay"></div>
 
-        <div class="home-content">
+    <div class="home-content">
 
-            <div class="row home-content__main">
+        <div class="row home-content__main">
 
-                <h3>{{ page.title }}</h3>
+            <h3>{{ page.title }}</h3>
 
-                <h1>
-                    {{ content }}
-                </h1>
+            <h1>
+                {{ content }}
+            </h1>
 
-                <div class="home-content__buttons">
-                {% if page.header.button1Text %}                
+            <div class="home-content__buttons">
+                {% if page.header.button1Text %}
                     <a href="{{ page.header.button1Link }}" class="smoothscroll btn btn--stroke">
                         {{ page.header.button1Text }}
                     </a>
-                  {% endif %}
-                  {% if page.header.button2Text %}                
+                {% endif %}
+                {% if page.header.button2Text %}
                     <a href="{{ page.header.button2Link }}" class="smoothscroll btn btn--stroke">
                         {{ page.header.button2Text }}
                     </a>
-                    {% endif %}
-                </div>
-
-                <div class="home-content__scroll">
-                    <a href="{{ page.header.button3Link }}" class="scroll-link smoothscroll">
-                        <span>{{ page.header.button3Text }}</span>
-                    </a>
-                </div>
-
+                {% endif %}
             </div>
 
-        </div> <!-- end home-content -->
+            <div class="home-content__scroll">
+                <a href="{{ page.header.button3Link }}" class="scroll-link smoothscroll">
+                    <span>{{ page.header.button3Text }}</span>
+                </a>
+            </div>
 
+        </div>
+
+    </div>
+    <!-- end home-content -->
+    {% if page.header.social %}
         <ul class="home-social">
-        {% for icon in page.header.social %}
-            <li>
-                <a href="{{ icon.socialIconLink }}"><i class="{{ icon.socialIconClass }}" aria-hidden="true"></i><span>{{ icon.socialIconText }}</span></a>
-            </li>
-        {% endfor %}            
-        </ul> 
+            {% for icon in page.header.social %}
+                <li>
+                    <a href="{{ icon.socialIconLink }}">
+                        <i class="{{ icon.socialIconClass }}" aria-hidden="true"></i>
+                        <span>{{ icon.socialIconText }}</span></a>
+                </li>
+            {% endfor %}
+        </ul>
         <!-- end home-social -->
+    {% endif %}
 
-    </section> <!-- end s-home -->
+</section>
+<!-- end s-home -->
