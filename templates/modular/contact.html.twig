@@ -46,7 +46,7 @@
 
     <script>
         $(document).ready(function () {
-            var form = $('#kontakt-ajax-form');
+            var form = $('.contact__main form');
             form.submit(function (e) {
                 // prevent form submission
                 e.preventDefault();
@@ -58,6 +58,7 @@
                     data: form.serialize(),
                     success: function (result) {
                         // Inject the result in the HTML
+                        $('.message-success').show();
                         $('.message-success').html(result);
                     }
                 });
