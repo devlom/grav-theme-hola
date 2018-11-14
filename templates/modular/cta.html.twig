@@ -1,21 +1,22 @@
-    <section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-cta {{ page.header.sectionBackground }} target-section">
-        
-        <div class="row narrow cta">
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+         class="s-cta {{ page.header.sectionBackground }} target-section">
 
-            <div class="col-full cta__content">
+    <div class="row narrow cta">
 
-                <h2 class="h01"><a href="{{ page.header.titleLink }}">{{ page.title }}</a></h2>
+        <div class="col-full cta__content">
 
-                <p class="lead">
+            <h2 class="h01"><a href="{{ page.header.titleLink }}">{{ page.title }}</a></h2>
+
+            <p class="lead">
                 {{ content|striptags('<a><span>') }}
-                </p>
+            </p>
 
-                <div class="cta__action">
-                    <a class="btn btn--primary btn--large" href="{{ page.header.buttonLink }}">{{ page.header.buttonText }}</a>
-                </div>	
-
+            <div class="cta__action">
+                <a class="btn btn--primary btn--large" href="{{ page.header.buttonLink }}">{{ page.header.buttonText }}</a>
             </div>
 
-        </div> <!-- end cta -->
-        
-    </section>
+        </div>
+
+    </div> <!-- end cta -->
+
+</section>

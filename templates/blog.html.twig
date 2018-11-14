@@ -7,6 +7,7 @@
 {% block body %}
     {% for child in collection %}
         {% if loop.first %}
+
             <section class="page-header page-hero" style="background-image:url({{ child.media[child.header.hero_image].url() }})">
 
                 <div class="row page-header__content">
@@ -19,13 +20,13 @@
                                 {% endfor %}
                             </div>
                             <div class="page-header__date">
-                                {{child.date|date("F d, Y")}}
+                                {{ child.date|date("F d, Y") }}
                             </div>
                         </div>
 
                         <h1 class="page-header__title">
-                            <a href="{{child.url}}" title="">
-                                {{child.title}}
+                            <a href="{{ child.url }}" title="">
+                                {{ child.title }}
                             </a>
                         </h1>
                         <p>{{ child.content|slice(0, 150) }}...</p>
@@ -35,8 +36,7 @@
                     </article>
                 </div>
 
-            </section>
-            <!-- end highlighted-post -->
+            </section> <!-- end highlighted-post -->
 
         {% endif %}
     {% endfor %}
@@ -50,7 +50,7 @@
                             <article class="col-block">
 
                                 <div class="blog-date">
-                                    <a href="{{ child.url }}">{{child.date|date("F d, Y") }}</a>
+                                    <a href="{{ child.url }}">{{ child.date|date("F d, Y") }}</a>
                                 </div>
 
                                 <h2 class="h01">

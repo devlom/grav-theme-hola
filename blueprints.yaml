@@ -1,6 +1,6 @@
 name: Hola
 version: 1.1.1
-description: Hola is a modern and stylish vCard website template. 
+description: Hola is a modern and stylish vCard website template.
 icon:  id-card-o
 author:
   name: Devlom
@@ -23,7 +23,7 @@ form:
       type: section
       title: Header Defaults
       underline: true
-      
+
     custom_logo:
       type: file
       label: Custom Logo
@@ -39,11 +39,11 @@ form:
       type: section
       title: Footer Defaults
       underline: true
-      
+
     footer-text:
       type: text
       label: Copyright Bottom Message
-      
+
     footer-design:
       type: text
       label: About Design And Project Description
@@ -52,7 +52,7 @@ form:
       label: Additional Text Beneath Footer Copyright Text
     footer-social:
       type: list
-      label: Social icons 
+      label: Social icons
       style: vertical
       fields:
         .socialIconClass:

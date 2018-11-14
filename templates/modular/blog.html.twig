@@ -2,46 +2,48 @@
 {% set collection = page.collection() %}
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_pagination = header_var('show_pagination', [page, blog]) | defined(true) %}
-<!-- blog
-    ================================================== -->
-    <section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-blog {{ page.header.sectionBackground }} target-section">
 
-        <div class="row narrow section-intro has-bottom-sep">
-            <div class="col-full">
-                <h3>{{ page.header.smallTitle }}</h3>
-                <h1>{{ page.title }}</h1>
-                <p  class="lead">{{ page.content|striptags }}</p>
-            </div>
+<!-- blog ================================================== -->
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+         class="s-blog {{ page.header.sectionBackground }} target-section">
+
+    <div class="row narrow section-intro has-bottom-sep">
+        <div class="col-full">
+            <h3>{{ page.header.smallTitle }}</h3>
+            <h1>{{ page.title }}</h1>
+            <p class="lead">{{ page.content|striptags }}</p>
         </div>
+    </div>
 
-        <div class="row blog-content">
-            <div class="col-full">
+    <div class="row blog-content">
+        <div class="col-full">
 
-                <div class="blog-list block-1-2 block-tab-full">
-                  {% for page in collection %}
+            <div class="blog-list block-1-2 block-tab-full">
+                {% for page in collection %}
 
-                                <article class="col-block">
+                    <article class="col-block">
 
-                                    <div class="blog-date">
-                                        <a href="{{ page.url }}">{{page.date|date("F d, Y") }}</a>
-                                    </div>
+                        <div class="blog-date">
+                            <a href="{{ page.url }}">{{ page.date|date("F d, Y") }}</a>
+                        </div>
 
-                                    <h2 class="h01">
-                                        <a href="{{ page.link }}">{{ page.title }}</a>
-                                    </h2>
-                                    <p>
-                                        {{ page.header.lead|slice (0.300) }}
-                                    </p>
+                        <h2 class="h01">
+                            <a href="{{ page.link }}">{{ page.title }}</a>
+                        </h2>
+                        <p>
+                            {{ page.header.lead|slice (0.300) }}
+                        </p>
 
-                                    <div class="blog-cat">
-                                        <a href="{{ page.categoryLink }}">{{ page.postCategory }}</a>
-                                    </div>
+                        <div class="blog-cat">
+                            <a href="{{ page.categoryLink }}">{{ page.postCategory }}</a>
+                        </div>
 
-                                </article>
+                    </article>
 
-                        {% endfor %}
-                </div> <!-- end blog-list -->
-        
-            </div> <!-- end col-full -->
-        </div> <!-- end blog-content -->
-    </section> <!-- end s-blog -->
+                {% endfor %}
+            </div> <!-- end blog-list -->
+
+        </div> <!-- end col-full -->
+    </div> <!-- end blog-content -->
+    
+</section> <!-- end s-blog -->

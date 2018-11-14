@@ -3,16 +3,16 @@
  *
  * ------------------------------------------------------------------- */
 
-(function($) {
+(function ($) {
 
     "use strict";
 
     var cfg = {
-        scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : ''   // mailchimp url
-    },
+            scrollDuration: 800, // smoothscroll duration
+            mailChimpURL: ''   // mailchimp url
+        },
 
-    $WIN = $(window);
+        $WIN = $(window);
 
     // Add the User Agent to the <html>
     // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
@@ -22,34 +22,34 @@
 
     /* Preloader
      * -------------------------------------------------- */
-    var ssPreloader = function() {
+    var ssPreloader = function () {
 
         $("html").addClass('ss-preload');
 
-        $WIN.on('load', function() {
+        $WIN.on('load', function () {
 
             // force page scroll position to top at page refresh
             // $('html, body').animate({ scrollTop: 0 }, 'normal');
 
             // will first fade out the loading animation 
-            $("#loader").fadeOut("slow", function() {
+            $("#loader").fadeOut("slow", function () {
                 // will fade out the whole DIV that covers the website.
                 $("#preloader").delay(300).fadeOut("slow");
-            }); 
-            
+            });
+
             // for hero content animations 
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
-        
+
         });
     };
 
 
     /* pretty print
      * -------------------------------------------------- */
-    var ssPrettyPrint = function() {
+    var ssPrettyPrint = function () {
         $('pre').addClass('prettyprint');
-        $( document ).ready(function() {
+        $(document).ready(function () {
             prettyPrint();
         });
     };
@@ -98,13 +98,13 @@
 
 
     /* Mobile Menu
-     * ---------------------------------------------------- */ 
-    var ssMobileMenu = function() {
+     * ---------------------------------------------------- */
+    var ssMobileMenu = function () {
 
         var toggleButton = $('.header-menu-toggle'),
             nav = $('.header-nav-wrap');
 
-        toggleButton.on('click', function(event){
+        toggleButton.on('click', function (event) {
             event.preventDefault();
 
             toggleButton.toggleClass('is-clicked');
@@ -113,16 +113,16 @@
 
         if (toggleButton.is(':visible')) nav.addClass('mobile');
 
-        $WIN.on('resize', function() {
+        $WIN.on('resize', function () {
             if (toggleButton.is(':visible')) nav.addClass('mobile');
             else nav.removeClass('mobile');
         });
 
-        nav.find('a').on("click", function() {
+        nav.find('a').on("click", function () {
 
             if (nav.hasClass('mobile')) {
                 toggleButton.toggleClass('is-clicked');
-                nav.slideToggle(); 
+                nav.slideToggle();
             }
         });
 
@@ -130,7 +130,7 @@
 
 
     /* Masonry
-     * ---------------------------------------------------- */ 
+     * ---------------------------------------------------- */
     var ssMasonryFolio = function () {
 
         var containerBricks = $('.masonry');
@@ -144,77 +144,77 @@
     };
     /*-------
     --------------------------------------------- */
-	/* Owl Carousel
-	------------------------------------------------------ */ 
-	$("#owl-slider").owlCarousel({
+    /* Owl Carousel
+    ------------------------------------------------------ */
+    $("#owl-slider").owlCarousel({
         navigation: false,
         pagination: true,
-        itemsCustom : [
-	        [0, 1],
-	        [700, 2],
-	        [960, 3]
-	     ],
+        itemsCustom: [
+            [0, 1],
+            [700, 2],
+            [960, 3]
+        ],
         navigationText: false
     });
 
     /* photoswipe
      * ----------------------------------------------------- */
-    var ssPhotoswipe = function() {
+    var ssPhotoswipe = function () {
         var items = [],
             $pswp = $('.pswp')[0],
             $folioItems = $('.gallery-wrapper');
 
-            // get items
-            $folioItems.each( function(i) {
+        // get items
+        $folioItems.each(function (i) {
 
-                var $folio = $(this),
-                    $thumbLink =  $folio.find('.thumb-link'),
-                    $title = $folio.find('.item-folio__title'),
-                    $caption = $folio.find('.item-folio__caption'),
-                    $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
-                    $captionText = $.trim($caption.html()),
-                    $href = $thumbLink.attr('href'),
-                    $size = $thumbLink.data('size').split('x'),
-                    $width  = $size[0],
-                    $height = $size[1];
-         
-                var item = {
-                    src  : $href,
-                    w    : $width,
-                    h    : $height
+            var $folio = $(this),
+                $thumbLink = $folio.find('.thumb-link'),
+                $title = $folio.find('.item-folio__title'),
+                $caption = $folio.find('.item-folio__caption'),
+                $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
+                $captionText = $.trim($caption.html()),
+                $href = $thumbLink.attr('href'),
+                $size = $thumbLink.data('size').split('x'),
+                $width = $size[0],
+                $height = $size[1];
+
+            var item = {
+                src: $href,
+                w: $width,
+                h: $height
+            }
+
+            if ($caption.length > 0) {
+                item.title = $.trim($titleText + $captionText);
+            }
+
+            items.push(item);
+        });
+
+        // bind click event
+        $folioItems.each(function (i) {
+
+            $(this).on('click', function (e) {
+                e.preventDefault();
+                var options = {
+                    index: i,
+                    showHideOpacity: true
                 }
 
-                if ($caption.length > 0) {
-                    item.title = $.trim($titleText + $captionText);
-                }
-
-                items.push(item);
+                // initialize PhotoSwipe
+                var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+                lightBox.init();
             });
 
-            // bind click event
-            $folioItems.each(function(i) {
-
-                $(this).on('click', function(e) {
-                    e.preventDefault();
-                    var options = {
-                        index: i,
-                        showHideOpacity: true
-                    }
-
-                    // initialize PhotoSwipe
-                    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-                    lightBox.init();
-                });
-
-            });
+        });
 
     };
 
 
     /* slick slider
      * ------------------------------------------------------ */
-    var ssSlickSlider = function() {
-        
+    var ssSlickSlider = function () {
+
         $('.testimonials__slider').slick({
             arrows: true,
             dots: false,
@@ -222,7 +222,7 @@
             slidesToShow: 2,
             slidesToScroll: 1,
             prevArrow: "<div class=\'slick-prev\'><i class=\'im im-arrow-left\' aria-hidden=\'true\'></i></div>",
-            nextArrow: "<div class=\'slick-next\'><i class=\'im im-arrow-right\' aria-hidden=\'true\'></i></div>",       
+            nextArrow: "<div class=\'slick-next\'><i class=\'im im-arrow-right\' aria-hidden=\'true\'></i></div>",
             pauseOnFocus: false,
             autoplaySpeed: 1500,
             responsive: [
@@ -241,14 +241,14 @@
 
     /* Highlight the current section in the navigation bar
      * ------------------------------------------------------ */
-    var ssWaypoints = function() {
+    var ssWaypoints = function () {
 
         var sections = $(".target-section"),
             navigation_links = $(".header-nav li a");
 
-        sections.waypoint( {
+        sections.waypoint({
 
-            handler: function(direction) {
+            handler: function (direction) {
 
                 var active_section;
 
@@ -266,27 +266,27 @@
             offset: '25%'
 
         });
-        
+
     };
 
 
-   /* Stat Counter
-    * ------------------------------------------------------ */
-    var ssStatCount = function() {
+    /* Stat Counter
+     * ------------------------------------------------------ */
+    var ssStatCount = function () {
 
         var statSection = $(".s-stats"),
-        stats = $(".stats__count");
+            stats = $(".stats__count");
 
         statSection.waypoint({
 
-            handler: function(direction) {
+            handler: function (direction) {
 
                 if (direction === "down") {
 
                     stats.each(function () {
                         var $this = $(this);
 
-                        $({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                        $({Counter: 0}).animate({Counter: $this.text()}, {
                             duration: 4000,
                             easing: 'swing',
                             step: function (curValue) {
@@ -295,7 +295,7 @@
                         });
                     });
 
-                } 
+                }
 
                 // trigger once only
                 this.destroy();
@@ -308,14 +308,14 @@
     };
 
 
-   /* Smooth Scrolling
-    * ------------------------------------------------------ */
-    var ssSmoothScroll = function() {
+    /* Smooth Scrolling
+     * ------------------------------------------------------ */
+    var ssSmoothScroll = function () {
 
         $('.smoothscroll').on('click', function (e) {
             var target = this.hash,
-            $target    = $(target);
-        
+                $target = $(target);
+
             e.preventDefault();
             e.stopPropagation();
 
@@ -331,34 +331,34 @@
 
     /* Placeholder Plugin Settings
      * ------------------------------------------------------ */
-    var ssPlaceholder = function() {
-        $('input, textarea, select').placeholder();  
+    var ssPlaceholder = function () {
+        $('input, textarea, select').placeholder();
     };
 
 
     /* Alert Boxes
      * ------------------------------------------------------ */
-    var ssAlertBoxes = function() {
+    var ssAlertBoxes = function () {
 
-        $('.alert-box').on('click', '.alert-box__close', function() {
+        $('.alert-box').on('click', '.alert-box__close', function () {
             $(this).parent().fadeOut(500);
-        }); 
+        });
 
     };
 
 
-   /* Back to Top
-    * ------------------------------------------------------ */
-    var ssBackToTop = function() {
+    /* Back to Top
+     * ------------------------------------------------------ */
+    var ssBackToTop = function () {
 
-        var pxShow  = 500,   // height on which the button will show
-        fadeInTime  = 400,   // how slow/fast you want the button to show
-        fadeOutTime = 400,   // how slow/fast you want the button to hide
-        scrollSpeed = 300,   // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
-        goTopButton = $(".go-top")
+        var pxShow = 500,   // height on which the button will show
+            fadeInTime = 400,   // how slow/fast you want the button to show
+            fadeOutTime = 400,   // how slow/fast you want the button to hide
+            scrollSpeed = 300,   // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
+            goTopButton = $(".go-top")
 
         // Show or hide the sticky footer button
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             if ($(window).scrollTop() >= pxShow) {
                 goTopButton.fadeIn(fadeInTime);
             } else {
@@ -368,8 +368,8 @@
     };
 
 
-   /* Initialize
-    * ------------------------------------------------------ */
+    /* Initialize
+     * ------------------------------------------------------ */
     (function ssInit() {
 
         ssPreloader();

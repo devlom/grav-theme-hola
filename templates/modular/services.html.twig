@@ -1,36 +1,38 @@
-<section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-services {{ page.header.sectionBackground }} target-section">
-<div class="overlay"></div>	
-<div class="row section-intro">
-   		<div class="col-twelve">
-			{% if page.header.smallTitle %}
-   			<h3>{{ page.header.smallTitle}}</h3>
-			   {% endif %}
-			  {% if page.title %}
-   			<h1>{{ page.title }}</h1>
-			   {% endif %}
-   			<p class="lead">{{ page.description }}</p>
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+         class="s-services {{ page.header.sectionBackground }} target-section">
 
-   		</div>   		
-   	</div> <!-- /section-intro -->
+    <div class="overlay"></div>
+    <div class="row section-intro">
+        <div class="col-twelve">
+            {% if page.header.smallTitle %}
+                <h3>{{ page.header.smallTitle }}</h3>
+            {% endif %}
+            {% if page.title %}
+                <h1>{{ page.title }}</h1>
+            {% endif %}
+            <p class="lead">{{ page.description }}</p>
 
-   	<div class="row services-content">
+        </div>
+    </div> <!-- /section-intro -->
 
-   		<div id="owl-slider" class="owl-carousel services-list">
-           {% for item in page.header.services %}
-               
-           
-        <div class="service">	
-        <span class="icon"><i class="{{ item.icon }}"></i></span>            
-        <div class="service-content">	
-        <h3>{{ item.title }}</h3>
-        <p class="desc">{{ item.description }}
-	         		</p>
-	         		</div> 	         	 
+    <div class="row services-content">
+
+        <div id="owl-slider" class="owl-carousel services-list">
+            {% for item in page.header.services %}
+
+
+                <div class="service">
+                    <span class="icon"><i class="{{ item.icon }}"></i></span>
+                    <div class="service-content">
+                        <h3>{{ item.title }}</h3>
+                        <p class="desc">{{ item.description }}
+                        </p>
+                    </div>
                 </div>
 
-                {% endfor %}
-              
-</div> <!-- /services-list -->
-   		
-   	</div> 
-		</section> 
+            {% endfor %}
+
+        </div> <!-- /services-list -->
+    </div>
+
+</section>

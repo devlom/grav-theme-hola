@@ -1,92 +1,91 @@
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
-    <head>
-        {% block head %}
-            <meta charset="utf-8"/>
-            <title>
-                {% if header.title %}{{ header.title|e('html') }}
-                    |
-                {% endif %}{{ site.title|e('html') }}</title>
+<head>
+    {% block head %}
+        <meta charset="utf-8"/>
+        <title>
+            {% if header.title %}{{ header.title|e('html') }}
+                |
+            {% endif %}{{ site.title|e('html') }}</title>
 
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            {% include 'partials/metadata.html.twig' %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include 'partials/metadata.html.twig' %}
 
-            <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}"/>
-            <link rel="canonical" href="{{ page.url(true, true) }}"/>
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}"/>
+        <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
-            {% block stylesheets %}
-                {% do 
-                    assets.addCss('theme://css/base.css') %}
-                {% do 
-                    assets.addCss('theme://css/vendor.css') %}
-                {% do 
-                    assets.addCss('theme://css/main.css') %}
-                {% do assets.addCss('theme://css/font-awesome.min.css') %}
+        {% block stylesheets %}
+            {% do
+                assets.addCss('theme://css/base.css') %}
+            {% do
+                assets.addCss('theme://css/vendor.css') %}
+            {% do
+                assets.addCss('theme://css/main.css') %}
+            {% do assets.addCss('theme://css/font-awesome.min.css') %}
 
+        {% endblock %}
+        {{ assets.css() }}
+
+        {% block javascripts %}
+            {% do
+                assets.addJs('theme://js/modernizr.js') %}
+            {% do
+                assets.addJs('theme://js/pace.min.js') %}
+            {% do
+                assets.addJs('jquery', 101, {group: 'bottom'}) %}
+            {% do
+                assets.addJs('theme://js/plugins.js', {group: 'bottom'}) %}
+            {% do
+                assets.addJs('theme://js/main.js', {group: 'bottom'}) %}
+        {% endblock %}
+        {{ assets.js() }}
+
+    {% endblock head %}
+</head>
+<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
+<!-- header ================================================== -->
+{% block header %}
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="footer-site-logo" href="{{ base_url_relative }}">
+                {% include 'partials/logo.html.twig' %}
+            </a>
+        </div>
+        <nav class="header-nav-wrap">
+
+            {% block header_navigation %}
+                {% include 'partials/navigation.html.twig' %}
             {% endblock %}
-            {{ assets.css() }}
 
-            {% block javascripts %}
-                {% do 
-                    assets.addJs('theme://js/modernizr.js') %}
-                {% do 
-                    assets.addJs('theme://js/pace.min.js') %}
-                {% do 
-                    assets.addJs('jquery', 101, {group: 'bottom'}) %}
-                {% do 
-                    assets.addJs('theme://js/plugins.js', {group: 'bottom'}) %}
-                {% do 
-                    assets.addJs('theme://js/main.js', {group: 'bottom'}) %}
-            {% endblock %}
-            {{ assets.js() }}
-
-        {% endblock head %}
-    </head>
-    <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
-        <!-- header ================================================== -->
-        {% block header %}
-            <header class="s-header">
-                <div class="header-logo">
-                    <a class="footer-site-logo" href="{{ base_url_relative }}">
-                        {% include 'partials/logo.html.twig' %}
-                    </a>
-                </div>
-                <nav class="header-nav-wrap">
-
-                    {% block header_navigation %}
-                        {% include 'partials/navigation.html.twig' %}
-                    {% endblock %}
-
-                    {% if config.plugins.login.enabled and grav.user.username %}
-                        <span class="login-status-wrapper">
+            {% if config.plugins.login.enabled and grav.user.username %}
+                <span class="login-status-wrapper">
                             <i class="fa fa-user"></i>
-                            {% include 'partials/login-status.html.twig' %}</span>
-                    {% endif %}
-                </nav>
-                <a class="header-menu-toggle" href="#0">
-                    <span>Menu</span></a>
-            </header>
-            <div class="mobile-menu">
-                <div class="button_container" id="toggle">
-                    <span class="top"></span>
-                    <span class="middle"></span>
-                    <span class="bottom"></span>
-                </div>
-            </div>
-        {% endblock %}
-        <!-- end s-header -->
+                    {% include 'partials/login-status.html.twig' %}</span>
+            {% endif %}
+        </nav>
+        <a class="header-menu-toggle" href="#0">
+            <span>Menu</span></a>
+    </header>
+    <div class="mobile-menu">
+        <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
+    </div>
+{% endblock %} <!-- end s-header -->
 
-        {% block body %}
-            {% block content %}{% endblock %}
-        {% endblock %}
+{% block body %}
+    {% block content %}{% endblock %}
+{% endblock %}
 
-        {% block footer %}
-            {% include 'partials/footer.html.twig' %}
-        {% endblock %}
+{% block footer %}
+    {% include 'partials/footer.html.twig' %}
+{% endblock %}
 
-        {% block bottom %}
-            {{ assets.js('bottom') }}
-        {% endblock %}
+{% block bottom %}
+    {{ assets.js('bottom') }}
+{% endblock %}
 
-    </body>
+</body>
