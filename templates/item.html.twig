@@ -1,5 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
+
     <article class="blog-single">
 
         <!-- page header/blog hero ================================================== -->
@@ -17,11 +18,11 @@
                     </div>
                     <h1 class="page-header__title">
                         <a href="{{ page.url }}" title="">
-                            {{page.title}}
+                            {{ page.title }}
                         </a>
                     </h1>
                     <ul class="page-header__meta">
-                        <li class="date">{{page.date|date("F d, Y")}}</li>
+                        <li class="date">{{ page.date|date("F d, Y") }}</li>
                         <li class="author">
                             By
                             <span>
@@ -35,8 +36,7 @@
                 </article>
             </div>
 
-        </div>
-        <!-- end page-header -->
+        </div> <!-- end page-header -->
 
         <div class="row blog-content">
             <div class="col-full blog-content__main">
@@ -73,18 +73,16 @@
                         </div>
                     </div>
 
-                        <div class="blog-content__all">
-                            <a href="{{ page.parent.url() }}" class="btn btn--primary">
-                                View All Post
-                            </a>
-                        </div>
+                    <div class="blog-content__all">
+                        <a href="{{ page.parent.url() }}" class="btn btn--primary">
+                            View All Post
+                        </a>
                     </div>
-
                 </div>
-                <!-- end blog-content__main -->
-            </div>
-            <!-- end blog-content -->
 
-        </article>
+            </div> <!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
 
-    {% endblock %}
+    </article>
+
+{% endblock %}

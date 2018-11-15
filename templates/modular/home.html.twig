@@ -1,6 +1,8 @@
-<section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{ page.media[page.header.background].url() }}" data-natural-width="3000" data-natural-height="2000" data-position-y="center">
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+         class="s-home page-hero target-section" data-parallax="scroll" data-image-src="{{ page.media[page.header.background].url() }}"
+         data-natural-width="3000" data-natural-height="2000" data-position-y="center">
 
-    <div class="overlay" style="opacity:{{page.header.bannerOpacity}};"></div>
+    <div class="overlay" style="opacity:{{ page.header.bannerOpacity }};"></div>
     <div class="shadow-overlay"></div>
 
     <div class="home-content">
@@ -34,8 +36,7 @@
 
         </div>
 
-    </div>
-    <!-- end home-content -->
+    </div> <!-- end home-content -->
     {% if page.header.social %}
         <ul class="home-social">
             {% for icon in page.header.social %}
@@ -45,9 +46,7 @@
                         <span>{{ icon.socialIconText }}</span></a>
                 </li>
             {% endfor %}
-        </ul>
-        <!-- end home-social -->
+        </ul> <!-- end home-social -->
     {% endif %}
 
-</section>
-<!-- end s-home -->
+</section> <!-- end s-home -->

@@ -1,6 +1,8 @@
-<section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-contact target-section" style="background: url({{ page.media[page.header.background].url }});background-position: center;">
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+         class="s-contact target-section"
+         style="background: url({{ page.media[page.header.background].url }});background-position: center;">
 
-    <div class="overlay" style="opacity:{{page.header.opacity}};"></div>
+    <div class="overlay" style="opacity:{{ page.header.opacity }};"></div>
 
     <div class="row narrow section-intro">
         <div class="col-full">
@@ -13,7 +15,7 @@
 
     <div class="row contact__main">
         <div class="col-eight tab-full contact__form">
-                {% include "forms/form.html.twig" %}
+            {% include "forms/form.html.twig" %}
             <!-- contact-warning -->
             <div class="message-warning">
                 Something went wrong. Please try again.

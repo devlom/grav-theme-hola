@@ -3,32 +3,54 @@
 
 {% if pagination|length > 1 %}
 
-<ul class="pagination">
-    {% if pagination.hasPrev %}
-        {% set url =  (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
-        <li><a class="prev" rel="prev" href="{{ url }}"><i class="fa fa-long-arrow-left"></i></a></li>
-    {% else %}
-        <li><span><i class="fa fa-long-arrow-left"></i></span></li>
-    {% endif %}
-
-    {% for paginate in pagination %}
-
-        {% if paginate.isCurrent %}
-            <li><span>{{ paginate.number }}</span></li>
-        {% elseif paginate.isInDelta %}
-            {% set url = (base_url ~ pagination.params ~ paginate.url)|replace({'//':'/'}) %}
-            <li><a href="{{ url }}">{{ paginate.number }}</a></li>
-        {% elseif paginate.isDeltaBorder %}
-            <li class="gap"><span>&hellip;</span></li>
+    <ul class="pagination">
+        {% if pagination.hasPrev %}
+            {% set url =  (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
+            <li>
+                <a class="prev" rel="prev" href="{{ url }}">
+                    <i class="fa fa-long-arrow-left"></i>
+                </a>
+            </li>
+        {% else %}
+            <li>
+                <span>
+                    <i class="fa fa-long-arrow-left"></i>
+                </span>
+            </li>
         {% endif %}
 
-    {% endfor %}
-    {% if pagination.hasNext %}
-        {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
-        <li><a class="next" rel="next" href="{{ url }}"><i class="fa fa-long-arrow-right"></i></a></li>
-    {% else %}
-        <li><span><i class="fa fa-long-arrow-right"></i></span></li>
-    {% endif %}
-</ul>
+        {% for paginate in pagination %}
+
+            {% if paginate.isCurrent %}
+                <li>
+                    <span>{{ paginate.number }}</span>
+                </li>
+            {% elseif paginate.isInDelta %}
+                {% set url = (base_url ~ pagination.params ~ paginate.url)|replace({'//':'/'}) %}
+                <li>
+                    <a href="{{ url }}">{{ paginate.number }}</a>
+                </li>
+            {% elseif paginate.isDeltaBorder %}
+                <li class="gap">
+                    <span>&hellip;</span>
+                </li>
+            {% endif %}
+
+        {% endfor %}
+        {% if pagination.hasNext %}
+            {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
+            <li>
+                <a class="next" rel="next" href="{{ url }}">
+                    <i class="fa fa-long-arrow-right"></i>
+                </a>
+            </li>
+        {% else %}
+            <li>
+                <span>
+                    <i class="fa fa-long-arrow-right"></i>
+                </span>
+            </li>
+        {% endif %}
+    </ul>
 
 {% endif %}

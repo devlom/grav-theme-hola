@@ -1,16 +1,16 @@
+<!-- s-stats ================================================== -->
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+         class="s-stats {{ page.header.sectionBackground }} target-section">
 
-    <!-- s-stats
-    ================================================== -->
-    <section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-stats {{ page.header.sectionBackground }} target-section">
-        <div class="row block-1-4 block-tab-1-2 block-mob-full stats">
-        
+    <div class="row block-1-4 block-tab-1-2 block-mob-full stats">
+
         {% for item in page.header.stats %}
-            <div class="col-block stats__col {% if item.statHighlight == '1'%}stats__col--highlight{% endif %}">
-            {% if item.statIconClass %}
-            <div class="stats__upsign">
-                    <a href="{{item.statIconLink}}"><i class="{{item.statIconClass}}" aria-hidden="true"></i></a>
-                </div>
-            {% endif %}
+            <div class="col-block stats__col {% if item.statHighlight == '1' %}stats__col--highlight{% endif %}">
+                {% if item.statIconClass %}
+                    <div class="stats__upsign">
+                        <a href="{{ item.statIconLink }}"><i class="{{ item.statIconClass }}" aria-hidden="true"></i></a>
+                    </div>
+                {% endif %}
                 <div class="stats__count">
                     {{ item.statCount }}
                 </div>
@@ -18,8 +18,6 @@
             </div>
         {% endfor %}
 
-        </div>
-    </section> <!-- end s-stats -->
+    </div>
 
-
-    
+</section> <!-- end s-stats -->

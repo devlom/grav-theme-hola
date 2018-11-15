@@ -1,40 +1,40 @@
-<section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-basic {{ page.header.sectionBackground }} target-section">
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+         class="s-basic {{ page.header.sectionBackground }} target-section">
     <div class="row narrow section-intro has-bottom-sep">
         <div class="col-full text-center">
             <h3>{{ page.header.smallTitle }}</h3>
-            <h1>{{ page.title}}</h1>
+            <h1>{{ page.title }}</h1>
             <p class="lead">{{ page.content|striptags }}</p>
         </div>
     </div>
     {% for column in page.header.row %}
-        
-    
-    {% if column.secondColumnContent %}
-        <div class="row basic-content">
-            <div class="col-six tab-full left">
-                <h3>{{ column.firstColumnTitle }}</h3>
 
-                <p class="lead">{{ column.firstColumnContent|markdown }}
-                </p>
+        {% if column.secondColumnContent %}
+            <div class="row basic-content">
+                <div class="col-six tab-full left">
+                    <h3>{{ column.firstColumnTitle }}</h3>
+
+                    <p class="lead">{{ column.firstColumnContent|markdown }}
+                    </p>
+                </div>
+
+                <div class="col-six tab-full right">
+                    <h3>{{ column.secondColumnTitle }}</h3>
+
+                    <p class="lead">{{ column.secondColumnContent|markdown }}
+                    </p>
+                </div>
             </div>
+        {% else %}
+            <div class="row basic-content one-column">
+                <div class="col-eight tab-full">
+                    <h3>{{ column.firstColumnTitle }}</h3>
 
-            <div class="col-six tab-full right">
-                <h3>{{ column.secondColumnTitle }}</h3>
-
-                <p class="lead">{{ column.secondColumnContent|markdown }}
-                </p>
+                    <p class="lead">{{ column.firstColumnContent|markdown }}
+                    </p>
+                </div>
             </div>
-        </div>
-    {% else %}
-    <div class="row basic-content one-column">
-        <div class="col-eight tab-full">
-            <h3>{{ column.firstColumnTitle }}</h3>
-
-            <p class="lead">{{ column.firstColumnContent|markdown }}
-            </p>
-        </div>
-        </div>
-    {% endif %}
+        {% endif %}
 
     {% endfor %}
 

@@ -1,57 +1,58 @@
 <!-- resume Section
    ================================================== -->
-	<section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-resume {{ page.header.sectionBackground }} target-section">
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+         class="s-resume {{ page.header.sectionBackground }} target-section">
 
-		<div class="row section-intro">
-   		<div class="col-twelve">
+    <div class="row section-intro">
+        <div class="col-twelve">
 
-   			<h3>{{page.header.smallTitle}}</h3>
-   			<h1>{{page.title}}</h1>
+            <h3>{{ page.header.smallTitle }}</h3>
+            <h1>{{ page.title }}</h1>
 
-   			<p class="lead">{{content}}</p>
+            <p class="lead">{{ content }}</p>
 
-   		</div>   		
-   	</div> <!-- /section-intro--> 
+        </div>
+    </div> <!-- /section-intro-->
 
-{% for timeline in page.header.timeline %}
-	
+    {% for timeline in page.header.timeline %}
 
-   	<div class="row resume-timeline">
+        <div class="row resume-timeline">
 
-   		<div class="col-twelve resume-header">
+            <div class="col-twelve resume-header">
 
-   			<h2>{{ timeline.resumeTitle }}</h2>
+                <h2>{{ timeline.resumeTitle }}</h2>
 
-   		</div> <!-- /resume-header -->
+            </div> <!-- /resume-header -->
 
-   		<div class="col-twelve">
+            <div class="col-twelve">
 
-   			<div class="timeline-wrap">
-			{% for item in timeline.timelineItems %}
+                <div class="timeline-wrap">
+                    {% for item in timeline.timelineItems %}
 
-   				<div class="timeline-block">
+                        <div class="timeline-block">
 
-	   				<div class="timeline-ico">
-	   					<i class="{{ item.icon_class}}"></i>
-	   				</div>
+                            <div class="timeline-ico">
+                                <i class="{{ item.icon_class }}"></i>
+                            </div>
 
-	   				<div class="timeline-header">
-	   					<h3>{{ item.position }}</h3>
-	   					<p>{{ item.date }}</p>
-	   				</div>
+                            <div class="timeline-header">
+                                <h3>{{ item.position }}</h3>
+                                <p>{{ item.date }}</p>
+                            </div>
 
-	   				<div class="timeline-content">
-	   					<h4>{{ item.title }}</h4>
-	   					<p>{{ item.descripiton }}</p>
-	   				</div>
+                            <div class="timeline-content">
+                                <h4>{{ item.title }}</h4>
+                                <p>{{ item.descripiton }}</p>
+                            </div>
 
-	   			</div> <!-- /timeline-block -->
-			{% endfor %}
-   			</div> <!-- /timeline-wrap -->   			
+                        </div> <!-- /timeline-block -->
+                    {% endfor %}
+                </div> <!-- /timeline-wrap -->
 
-   		</div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /resume-timeline -->
-   	
-	{% endfor %}	
-	</section> <!-- /features -->
+            </div> <!-- /col-twelve -->
+
+        </div> <!-- /resume-timeline -->
+
+    {% endfor %}
+
+</section> <!-- /features -->
