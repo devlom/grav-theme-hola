@@ -239,35 +239,14 @@
     };
 
 
-    /* Highlight the current section in the navigation bar
-     * ------------------------------------------------------ */
-    var ssWaypoints = function () {
-
-        var sections = $(".target-section"),
-            navigation_links = $(".header-nav li a");
-
-        sections.waypoint({
-
-            handler: function (direction) {
-
-                var active_section;
-
-                active_section = $('section#' + this.element.id);
-
-                if (direction === "up") active_section = active_section.prevAll(".target-section").first();
-
-                var active_link = $('.header-nav li a[href="#' + active_section.attr("id") + '"]');
-
-                navigation_links.parent().removeClass("current");
-                active_link.parent().addClass("current");
-
-            },
-
-            offset: '25%'
-
-        });
-
-    };
+	/* Highlight the current section in the navigation bar on page load
+	 * ------------------------------------------------------ */
+	var ssWaypoints = function() {
+		var active_link = $('.header-nav li a[href="' + decodeURIComponent(window.location.hash) + '"]');
+		console.log('.header-nav li a[href="' + decodeURIComponent(window.location.hash) + '"]');
+		active_link.parent().addClass("current");
+		offset: '25%'
+	};
 
 
     /* Stat Counter
@@ -308,25 +287,49 @@
     };
 
 
-    /* Smooth Scrolling
-     * ------------------------------------------------------ */
-    var ssSmoothScroll = function () {
+	/* Smooth Scrolling
+	 * ------------------------------------------------------ */
+	var ssSmoothScroll = function() {
 
-        $('.smoothscroll').on('click', function (e) {
-            var target = this.hash,
-                $target = $(target);
+		$('.smoothscroll').on('click', function(e) {
+			var target = decodeURIComponent(this.hash),
+				$target = $(target);
 
-            e.preventDefault();
-            e.stopPropagation();
+			e.preventDefault();
+			e.stopPropagation();
 
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, cfg.scrollDuration, 'swing', function () {
-                window.location.hash = target;
-            });
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+			}, cfg.scrollDuration, 'swing', function() {
+				window.location.hash = target;
+			});
 
-        });
-    };
+			var sections = $(".target-section"),
+				navigation_links = $(".header-nav li a");
+
+			sections.waypoint({
+
+				handler: function(direction) {
+
+					var active_section;
+
+					active_section = $('section' + target);
+
+					// if (direction === "up") active_section = active_section.prevAll(".target-section").first();
+
+					var active_link = $('.header-nav li a[href="#' + active_section.attr("id") + '"]');
+
+					navigation_links.parent().removeClass("current");
+					active_link.parent().addClass("current");
+
+				},
+
+				offset: '25%'
+
+			});
+
+		});
+	};
 
 
     /* Placeholder Plugin Settings
