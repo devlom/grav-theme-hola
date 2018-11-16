@@ -4,7 +4,7 @@
 {% set show_pagination = header_var('show_pagination', [page, blog]) | defined(true) %}
 
 <!-- blog ================================================== -->
-<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu }}{% endif %}"
          class="s-blog {{ page.header.sectionBackground }} target-section">
 
     <div class="row narrow section-intro has-bottom-sep">
