@@ -12,57 +12,59 @@
                 </a>
                 <ul>
                     {{ _self.loop(p) }}
-            </ul>
-        </li>
-    {% else %}
-        <li class="{{ current_page }}">
-            <a href="{{ p.url }}">
-                {% if p.header.icon %}
-                    <i class="fa fa-{{ p.header.icon }}"></i>
-                {% endif %}
-                {{ p.menu }}
-            </a>
-        </li>
-    {% endif %}
-{% endfor %}
-{% endmacro %}
-<ul class="header-nav">
-{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'})}}
-{% endmacro %}
-{% set home = page.find('/') %}
-{% for module in home.collection %}
-    {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
-    
-        {{ dump(module.redirect) }}
-    
-    {% if module.header.visible %}
-        {% if page.slug == 'home' and module.modular_link %}
-            <li class=" {{ current_module }} ">
-                <a class="smoothscroll" href="#{% if module.redirect %}{{module.redirect}}{% else %}{{module.modular_link}}{% endif %}">{{ module.item_name }}</a>
-            </li>
-        {% elseif page.slug == 'home' and not module.modular_link %}
-            <li class=" {{ current_module }} ">
-                <a class="smoothscroll" href="#{% if module.redirect %}{{module.redirect}}{% else %}{{ (module.menu) }}{% endif %}">{{ module.menu }}</a>
+                </ul>
             </li>
         {% else %}
-            <li class=" {{ current_module }} ">
-                <a href="{{ base_url_relative }}#{{ module.menu }}">
-                    {{ module.menu }}
+            <li class="{{ current_page }}">
+                <a href="{{ p.url }}">
+                    {% if p.header.icon %}
+                        <i class="fa fa-{{ p.header.icon }}"></i>
+                    {% endif %}
+                    {{ p.menu }}
                 </a>
             </li>
         {% endif %}
-    {% endif %}
-{% endfor %}
+    {% endfor %}
+{% endmacro %}
+<ul class="header-nav">
+    {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}
+    {% endmacro %}
+    {% set home = page.find('/') %}
+    {% for module in home.collection %}
+        {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
 
-{% for page in pages.children.visible %}
-    {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
-    <li class="{{ current_page }}">
-        <a href="{{ page.url }}">
-            {% if page.header.icon %}
-                <i class="fa fa-{{ page.header.icon }}"></i>
+        {{ dump(module.redirect) }}
+
+        {% if module.header.visible %}
+            {% if page.slug == 'home' and module.modular_link %}
+                <li class=" {{ current_module }} ">
+                    <a class="smoothscroll"
+                       href="#{% if module.redirect %}{{ module.redirect }}{% else %}{{ module.modular_link }}{% endif %}">{{ module.item_name }}</a>
+                </li>
+            {% elseif page.slug == 'home' and not module.modular_link %}
+                <li class=" {{ current_module }} ">
+                    <a class="smoothscroll"
+                       href="#{% if module.redirect %}{{ module.redirect }}{% else %}{{ (module.menu) }}{% endif %}">{{ module.menu }}</a>
+                </li>
+            {% else %}
+                <li class=" {{ current_module }} ">
+                    <a href="{{ base_url_relative }}#{{ module.menu }}">
+                        {{ module.menu }}
+                    </a>
+                </li>
             {% endif %}
-            {{ page.menu }}
-        </a>
-    </li>
-{% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    {% for page in pages.children.visible %}
+        {% set current_page = (page.active or page.activeChild) ? 'current' : '' %}
+        <li class="{{ current_page }}">
+            <a href="{{ page.url }}">
+                {% if page.header.icon %}
+                    <i class="fa fa-{{ page.header.icon }}"></i>
+                {% endif %}
+                {{ page.menu }}
+            </a>
+        </li>
+    {% endfor %}
 </ul>

@@ -1,6 +1,7 @@
- <section id="{% if page.header.redirect %}{{page.header.redirect}}{% else %}{{page.menu|lower}}{% endif %}" class="s-experience {{ page.header.sectionBackground }} target-section">
- <div class="row experience-content experience-content--timeline">
+<section id="{% if page.header.redirect %}{{ page.header.redirect }}{% else %}{{ page.menu|lower }}{% endif %}"
+         class="s-experience {{ page.header.sectionBackground }} target-section">
 
+    <div class="row experience-content experience-content--timeline">
         <div class="col-full text-center">
             <h3>{{ page.title }}</h3>
         </div>
@@ -17,13 +18,10 @@
                         <div class="timeline__desc">
                             <p>{{ item.description }}</p>
                         </div>
-                    </div>
-                    <!-- end timeline__block -->
-                </div>
-                <!-- end timeline -->
-            </div>
-            <!-- end left -->
+                    </div> <!-- end timeline__block -->
+                </div> <!-- end timeline -->
+            </div> <!-- end left -->
         {% endfor %}
-    </div>
-    <!-- end experience-content timeline -->
-    </section>
+    </div> <!-- end experience-content timeline -->
+
+</section>

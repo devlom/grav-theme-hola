@@ -1,4 +1,5 @@
 <?php
+
 namespace Grav\Theme;
 
 use Grav\Common\Grav;
@@ -9,9 +10,9 @@ class Hola extends Theme
     public static function getSubscribedEvents()
     {
         return [
-            'onThemeInitialized'    => ['onThemeInitialized', 0],
-            'onTwigLoader'          => ['onTwigLoader', 0],
-            'onTwigInitialized'     => ['onTwigInitialized', 0],
+            'onThemeInitialized' => ['onThemeInitialized', 0],
+            'onTwigLoader' => ['onTwigLoader', 0],
+            'onTwigInitialized' => ['onTwigInitialized', 0],
         ];
     }
 
@@ -24,7 +25,7 @@ class Hola extends Theme
     public function onTwigLoader()
     {
         $theme_paths = Grav::instance()['locator']->findResources('theme://images');
-        foreach($theme_paths as $images_path) {
+        foreach ($theme_paths as $images_path) {
             $this->grav['twig']->addPath($images_path, 'images');
         }
     }
@@ -34,13 +35,13 @@ class Hola extends Theme
         $twig = $this->grav['twig'];
 
         $form_class_variables = [
-//            'form_outer_classes' => 'form-horizontal',
+            //'form_outer_classes' => 'form-horizontal',
             'form_button_outer_classes' => 'button-wrapper',
             'form_errors_classes' => '',
             'form_field_outer_classes' => 'form-group',
             'form_field_outer_label_classes' => 'form-label-wrapper',
             'form_field_label_classes' => 'form-label',
-//            'form_field_outer_data_classes' => 'col-9',
+            //'form_field_outer_data_classes' => 'col-9',
             'form_field_input_classes' => 'form-input',
             'form_field_textarea_classes' => 'form-input',
             'form_field_select_classes' => 'form-select',
@@ -51,5 +52,4 @@ class Hola extends Theme
         $twig->twig_vars = array_merge($twig->twig_vars, $form_class_variables);
 
     }
-
 }
