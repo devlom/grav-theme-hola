@@ -10,8 +10,9 @@
             {% if page.title %}
                 <h1>{{ page.title }}</h1>
             {% endif %}
-            <p class="lead">{{ page.description }}</p>
-
+           {% if page.content %}
+            <p class="lead">{{ page.content }}</p>
+            {% endif %}
         </div>
     </div> <!-- /section-intro -->
 
