@@ -23,6 +23,7 @@
 * Hundreds of customization options
 * Robust menu with both onepage and regular pages support
 * Complete blog layout
+* Multi-lingual metadata
 
 ![](hola-mobile.jpg)
 
@@ -85,6 +86,11 @@ custom_logo_mobile:
 
 Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Hola theme options.
 
+## Multi-lingual metadata
+
+Hola theme supports metadata for different languages
+
+Copy the metadata you need from [Metadata - Grav Documentation](https://learn.getgrav.org/hints-tips/blogging/metadata) and paste it to your `user/pages/01._home/modular.lang.md`after `onpage_menu: false` for example.
 
 ## Sources and Credits
 
