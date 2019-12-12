@@ -20,7 +20,7 @@
 
                         <div class="gallery-wrapper">
                             <div class="item-folio__thumb">
-                                <a href="{{ page.media[item.image].url() }}" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                                <a href="{{ page.media[item.image].url() }}" class="thumb-link" title="{{ item.title }}" data-size="1050x700">
                                     <img src="{{ page.media[item.image].url }}"
                                          srcset="{{ page.media[item.imageSize1].url }} 1x, {{ page.media[item.imageSize2].url }} 2x" alt="">
                                     <span class="shadow-overlay"></span>
