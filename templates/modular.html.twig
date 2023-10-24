@@ -2,6 +2,6 @@
 
 {% block body %}
     {% for module in page.collection() %}
-        {{ module.content }}
+        {{ module.content|raw }}
     {% endfor %}
 {% endblock %}
