@@ -26,7 +26,7 @@
                 {% do assets.addCss('theme://css/font-awesome.min.css') %}
 
             {% endblock %}
-            {{ assets.css() }}
+            {{ assets.css()|raw }}
 
             {% block javascripts %}
                 {% do 
@@ -40,7 +40,7 @@
                 {% do 
                     assets.addJs('theme://js/main.js', {group: 'bottom'}) %}
             {% endblock %}
-            {{ assets.js() }}
+            {{ assets.js()|raw }}
 
         {% endblock head %}
     </head>
@@ -87,7 +87,7 @@
         {% endblock %}
 
         {% block bottom %}
-            {{ assets.js('bottom') }}
+            {{ assets.js('bottom')|raw }}
         {% endblock %}
 
     </body>
