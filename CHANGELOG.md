@@ -6,6 +6,8 @@
     * Fixed deprecated `sameas` test to `same as` in blog title template
     * Fixed typo "Previus" to "Previous" in blog navigation
     * Fixed contact form validation not triggering - properly initialized jQuery validation plugin
+    * Fixed menu navigation URLs not working correctly from blog pages - added proper redirect handling
+    * Removed debug dump statement from navigation template
 
 # v1.1.2
 ##  11/06/2018

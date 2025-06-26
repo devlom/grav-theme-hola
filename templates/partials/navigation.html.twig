@@ -33,8 +33,6 @@
     {% for module in home.collection %}
         {% set current_module = (module.active or module.activeChild) ? 'current' : '' %}
 
-        {{ dump(module.redirect) }}
-
         {% if module.header.visible %}
             {% if page.slug == 'home' and module.modular_link %}
                 <li class=" {{ current_module }} ">
@@ -48,7 +46,7 @@
                 </li>
             {% else %}
                 <li class=" {{ current_module }} ">
-                    <a href="{{ base_url_relative }}#{{ module.menu }}">
+                    <a href="{{ base_url_relative }}/#{% if module.redirect %}{{ module.redirect }}{% else %}{{ (module.menu) }}{% endif %}">
                         {{ module.menu }}
                     </a>
                 </li>
