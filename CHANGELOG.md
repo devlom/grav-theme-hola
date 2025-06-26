@@ -10,6 +10,7 @@
     * Removed debug dump statement from navigation template
     * Fixed Unicode menu items breaking smooth scrolling - added decodeURIComponent and lowercase transformation
     * Fixed case mismatch between menu links and section IDs - ensured consistent lowercase in navigation
+    * Fixed Eastern European characters not displaying in Libre Baskerville font - added Google Fonts with extended character sets as fallbacks
 
 # v1.1.2
 ##  11/06/2018

@@ -84,7 +84,7 @@ html, body {
 
 body {
     background: #0a0809;
-    font-family: "librebaskerville-regular", serif;
+    font-family: "librebaskerville-regular", "Libre Baskerville", serif;
     font-size: 1.6rem;
     line-height: 1.875;
     color: #5f5f5f;
@@ -119,7 +119,7 @@ a:focus {
  * ------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
-    font-family: "montserrat-medium", sans-serif;
+    font-family: "montserrat-medium", "Montserrat", sans-serif;
     color: #0D0A0B;
     font-style: normal;
     font-weight: normal;
@@ -150,7 +150,7 @@ h5, .h05, h6, .h06 {
 }
 
 h1, .h01 {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     font-size: 3.6rem;
     line-height: 1.25;
     letter-spacing: -.1rem;
@@ -184,7 +184,7 @@ h5, .h05 {
 }
 
 h6, .h06 {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     font-size: 1.4rem;
     line-height: 1.5;
     text-transform: uppercase;
@@ -195,7 +195,7 @@ p img {
     margin: 0;
 }
 p.lead {
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 2rem;
     line-height: 1.8;
     margin-bottom: 3.6rem;
@@ -216,11 +216,11 @@ em, i, strong, b {
 }
 
 em, i {
-    font-family: "librebaskerville-italic", serif;
+    font-family: "librebaskerville-italic", "Libre Baskerville", serif;
 }
 
 strong, b {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "librebaskerville-bold", "Libre Baskerville", serif;
 }
 
 small {
@@ -247,7 +247,7 @@ blockquote:before {
 }
 
 blockquote p {
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     padding: 0;
     font-size: 2.1rem;
     line-height: 1.857;
@@ -256,7 +256,7 @@ blockquote p {
 
 blockquote cite {
     display: block;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.4rem;
     font-style: normal;
     line-height: 1.5;
@@ -272,7 +272,7 @@ blockquote cite a, blockquote cite a:visited {
 }
 
 abbr {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "librebaskerville-bold", "Libre Baskerville", serif;
     font-variant: small-caps;
     text-transform: lowercase;
     letter-spacing: .05rem;
@@ -437,7 +437,7 @@ table {
     border-width: 0;
     width: 100%;
     max-width: 100%;
-    font-family: "librebaskerville-regular", serif;
+    font-family: "librebaskerville-regular", "Libre Baskerville", serif;
 }
 
 th, td {
@@ -448,7 +448,7 @@ th, td {
 
 th {
     color: #0D0A0B;
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
 }
 
 td {
@@ -614,7 +614,7 @@ textarea, select {
     border: 0;
     outline: none;
     color: #333333;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.5rem;
     line-height: 3rem;
     max-width: 100%;
@@ -697,7 +697,7 @@ textarea:focus, select:focus {
 }
 
 label, legend {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     font-size: 1.4rem;
     margin-bottom: .9rem;
     line-height: 1.714;
@@ -712,7 +712,7 @@ input[type="checkbox"], input[type="radio"] {
 label > .label-text {
     display: inline-block;
     margin-left: 1rem;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     line-height: inherit;
 }
 
@@ -771,7 +771,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
     display: inline-block;
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "montserrat-semibold", "Montserrat", sans-serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
@@ -891,7 +891,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: relative;
     margin-bottom: 3rem;
     border-radius: 3px;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.5rem;
     line-height: 1.6;
 }
@@ -941,7 +941,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin: 0;
     padding: 1.5rem .6rem 0 0;
     font-size: 8.4rem;
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     line-height: 6rem;
     text-indent: 0;
     background: transparent;
@@ -1080,7 +1080,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .stats-tabs li a {
     display: inline-block;
     font-size: 2.5rem;
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "montserrat-semibold", "Montserrat", sans-serif;
     border: none;
     color: #151515;
 }
@@ -1093,7 +1093,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     display: block;
     margin: .6rem 0 0 0;
     font-size: 1.4rem;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     color: #6c6c6c;
 }
 
@@ -1120,7 +1120,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: absolute;
     left: 0;
     top: -3rem;
-    font-family: "montserrat-extrabold", sans-serif;
+    font-family: "montserrat-extrabold", "Montserrat", sans-serif;
     color: #0D0A0B;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -1140,7 +1140,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     right: 0;
     top: -3.6rem;
     display: block;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     color: #FFFFFF;
     font-size: 1.1rem;
     line-height: 1;
@@ -1266,14 +1266,14 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .section-intro h1 {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "librebaskerville-bold", "Libre Baskerville", serif;
     font-size: 4.8rem;
     line-height: 1.375;
     margin-top: 0;
 }
 
 .section-intro h3 {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "montserrat-semibold", "Montserrat", sans-serif;
     font-size: 2rem;
     color: #862121;
     text-transform: uppercase;
@@ -1351,7 +1351,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .blog-list h2 {
-    font-family: "montserrat-medium", sans-serif;
+    font-family: "montserrat-medium", "Montserrat", sans-serif;
     font-size: 3rem;
     line-height: 1.2;
     margin-top: .3rem;
@@ -1377,7 +1377,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .blog-list .blog-date {
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.5rem;
     color: #862121;
 }
@@ -1393,7 +1393,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .blog-list .blog-cat {
-    font-family: "montserrat-medium", sans-serif;
+    font-family: "montserrat-medium", "Montserrat", sans-serif;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -1549,7 +1549,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     height: 42px;
     width: 42px;
     line-height: 42px;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -1635,7 +1635,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 
 .header-nav-wrap {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: .25rem;
@@ -1664,7 +1664,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .header-nav li.current a {
-    font-family: "montserrat-extrabold", sans-serif;
+    font-family: "montserrat-extrabold", "Montserrat", sans-serif;
     color: #af2b2b;
 }
 
@@ -1777,7 +1777,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content h3 {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     font-size: 1.8rem;
     color: #862121;
     text-transform: uppercase;
@@ -1801,7 +1801,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content h1 {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "librebaskerville-bold", "Libre Baskerville", serif;
     color: #FFFFFF;
     font-size: 6rem;
     line-height: 1.35;
@@ -1844,7 +1844,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__scroll a {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "montserrat-semibold", "Montserrat", sans-serif;
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
@@ -1883,7 +1883,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 
 .home-social {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     list-style: none;
     margin: 0;
     padding-bottom: 18rem;
@@ -2326,7 +2326,7 @@ html.no-csstransitions .home-content__main {
     letter-spacing: .15rem;
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: .9rem;
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
 }
 
 .timeline__header h3 {
@@ -2595,7 +2595,7 @@ html.no-csstransitions .home-content__main {
 
 .item-folio__title {
     color: #FFFFFF;
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "montserrat-semibold", "Montserrat", sans-serif;
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -2604,7 +2604,7 @@ html.no-csstransitions .home-content__main {
 
 .item-folio__cat {
     color: rgba(255, 255, 255, 0.5);
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.5rem;
     margin-bottom: 0;
 }
@@ -2771,7 +2771,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .testimonials-header h1 {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "librebaskerville-bold", "Libre Baskerville", serif;
     font-size: 4.2rem;
     margin-top: 0;
     color: #FFFFFF;
@@ -2913,7 +2913,7 @@ html.no-csstransitions .home-content__main {
 
 .testimonials__author span {
     display: block;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.3rem;
     color: rgba(95, 95, 95, 0.7);
     text-transform: none;
@@ -3057,7 +3057,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .stats__count {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "librebaskerville-bold", "Libre Baskerville", serif;
     font-size: 7.2rem;
     line-height: 1;
     color: #0D0A0B;
@@ -3081,7 +3081,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .stats h4 {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "montserrat-semibold", "Montserrat", sans-serif;
     margin-top: 1.8rem;
     color: rgba(0, 0, 0, 0.4);
     font-size: 1.8rem;
@@ -3210,7 +3210,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-contact .form-field label {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "montserrat-semibold", "Montserrat", sans-serif;
     font-size: 1.1rem;
     line-height: 2.4rem;
     position: absolute;
@@ -3318,7 +3318,7 @@ html.no-csstransitions .home-content__main {
 
 .submit-loader .text-loader {
     display: none;
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     font-size: 1.4rem;
     color: #FFFFFF;
     letter-spacing: .2rem;
@@ -3429,7 +3429,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 
 footer {
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 14px;
     padding: 6.6rem 0 4.2rem;
     text-align: center;
@@ -3457,7 +3457,7 @@ footer a:hover, footer a:focus {
     list-style: none;
     margin-top: 3rem;
     margin-left: 0;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
@@ -3712,7 +3712,7 @@ article.blog-single .blog-content {
 }
 
 .page-header__content {
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 2rem;
     line-height: 1.8;
     position: relative;
@@ -3744,7 +3744,7 @@ article.blog-single .blog-content {
     text-transform: uppercase;
     letter-spacing: .16rem;
     color: rgba(255, 255, 255, 0.8);
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
 }
 
 .page-header__cat a {
@@ -3764,7 +3764,7 @@ article.blog-single .blog-content {
 }
 
 .page-header__date {
-    font-family: "montserrat-light", sans-serif;
+    font-family: "montserrat-light", "Montserrat", sans-serif;
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.4);
 }
@@ -3780,7 +3780,7 @@ article.blog-single .blog-content {
 .page-header__title {
     color: #FFFFFF;
     position: relative;
-    font-family: "librebaskerville-bold", serif;
+    font-family: "librebaskerville-bold", "Libre Baskerville", serif;
     font-size: 6.6rem;
     line-height: 1.227;
     margin-top: 0;
@@ -3930,11 +3930,11 @@ article.blog-single .blog-content {
 
 .blog-content__tags {
     margin-top: 6rem;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
 }
 
 .blog-content__tags span {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     color: #0D0A0B;
     position: relative;
     padding-right: 55px;
@@ -3965,7 +3965,7 @@ article.blog-single .blog-content {
 
 .blog-content__tags .blog-content__tag-list a {
     display: inline-block;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.3rem;
     line-height: inherit;
     color: #797979;
@@ -4010,7 +4010,7 @@ article.blog-single .blog-content {
 
 .blog-content__nav span {
     display: block;
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.6rem;
     color: #797979;
     margin-bottom: 1.2rem;
@@ -4019,7 +4019,7 @@ article.blog-single .blog-content {
 }
 
 .blog-content__nav a {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     font-size: 2.2rem;
     line-height: 1.5;
     color: #0D0A0B;
@@ -4056,7 +4056,7 @@ article.blog-single .blog-content {
  * ------------------------------------------------- */
 
 .pagination {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
 }
 .pagination i {
     top: -.1rem;
@@ -4214,14 +4214,14 @@ font-size: 14px;
 }
 
 .comment__info cite {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
     font-size: 1.8rem;
     font-style: normal;
     color: #0D0A0B;
 }
 
 .comment__meta {
-    font-family: "montserrat-regular", sans-serif;
+    font-family: "montserrat-regular", "Montserrat", sans-serif;
     font-size: 1.45rem;
     line-height: 3rem;
     font-style: normal;
@@ -4230,7 +4230,7 @@ font-size: 14px;
 }
 
 .comment__meta .reply {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "montserrat-bold", "Montserrat", sans-serif;
 }
 
 .comment__meta .sep {
