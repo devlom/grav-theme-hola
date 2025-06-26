@@ -51,7 +51,7 @@
 
 Installing the Hola theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file. 
 
-The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The skeleton can be found in [Hola Skeleton](https://github.com/devlom/grav-hola-skeleton) package which are self-contained repositories for a complete sites which include: sample content, configuration, theme, and plugins.
+The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The skeleton can be found in [Hola Skeleton](https://github.com/devlom/grav-skeleton-hola) package which are self-contained repositories for a complete sites which include: sample content, configuration, theme, and plugins.
 
 ## GPM Installation (Preferred)
 
