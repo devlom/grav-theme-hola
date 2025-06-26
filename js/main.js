@@ -313,7 +313,7 @@
     var ssSmoothScroll = function () {
 
         $('.smoothscroll').on('click', function (e) {
-            var target = this.hash,
+            var target = decodeURIComponent(this.hash).toLowerCase(),
                 $target = $(target);
 
             e.preventDefault();

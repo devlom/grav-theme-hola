@@ -37,16 +37,16 @@
             {% if page.slug == 'home' and module.modular_link %}
                 <li class=" {{ current_module }} ">
                     <a class="smoothscroll"
-                       href="#{% if module.redirect %}{{ module.redirect }}{% else %}{{ module.modular_link }}{% endif %}">{{ module.item_name }}</a>
+                       href="#{% if module.redirect %}{{ module.redirect }}{% else %}{{ module.modular_link|lower }}{% endif %}">{{ module.item_name }}</a>
                 </li>
             {% elseif page.slug == 'home' and not module.modular_link %}
                 <li class=" {{ current_module }} ">
                     <a class="smoothscroll"
-                       href="#{% if module.redirect %}{{ module.redirect }}{% else %}{{ (module.menu) }}{% endif %}">{{ module.menu }}</a>
+                       href="#{% if module.redirect %}{{ module.redirect }}{% else %}{{ (module.menu)|lower }}{% endif %}">{{ module.menu }}</a>
                 </li>
             {% else %}
                 <li class=" {{ current_module }} ">
-                    <a href="{{ base_url_relative }}/#{% if module.redirect %}{{ module.redirect }}{% else %}{{ (module.menu) }}{% endif %}">
+                    <a href="{{ base_url_relative }}/#{% if module.redirect %}{{ module.redirect }}{% else %}{{ (module.menu)|lower }}{% endif %}">
                         {{ module.menu }}
                     </a>
                 </li>

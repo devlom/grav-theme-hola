@@ -8,6 +8,8 @@
     * Fixed contact form validation not triggering - properly initialized jQuery validation plugin
     * Fixed menu navigation URLs not working correctly from blog pages - added proper redirect handling
     * Removed debug dump statement from navigation template
+    * Fixed Unicode menu items breaking smooth scrolling - added decodeURIComponent and lowercase transformation
+    * Fixed case mismatch between menu links and section IDs - ensured consistent lowercase in navigation
 
 # v1.1.2
 ##  11/06/2018
