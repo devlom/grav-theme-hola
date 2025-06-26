@@ -1,3 +1,12 @@
+# v1.1.3
+##  06/26/2025
+
+1. [](#bugfix)
+    * Fixed Twig compatibility issue in experience template - changed `{% if item is odd %}` to `{% if loop.index is odd %}`
+    * Fixed deprecated `sameas` test to `same as` in blog title template
+    * Fixed typo "Previus" to "Previous" in blog navigation
+    * Fixed contact form validation not triggering - properly initialized jQuery validation plugin
+
 # v1.1.2
 ##  11/06/2018
 

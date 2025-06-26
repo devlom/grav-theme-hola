@@ -49,21 +49,36 @@
     <script>
         $(document).ready(function () {
             var form = $('.contact__main form');
-            form.submit(function (e) {
-                // prevent form submission
-                e.preventDefault();
-                // submit the form via Ajax
-                $.ajax({
-                    url: form.attr('action'),
-                    type: form.attr('method'),
-                    dataType: 'html',
-                    data: form.serialize(),
-                    success: function (result) {
-                        // Inject the result in the HTML
-                        $('.message-success').show();
-                        $('.message-success').html(result);
-                    }
-                });
+            
+            // Initialize jQuery validation
+            form.validate({
+                errorElement: 'div',
+                errorClass: 'message-warning',
+                submitHandler: function(form) {
+                    // Hide any previous messages
+                    $('.message-warning').hide();
+                    $('.message-success').hide();
+                    
+                    // Submit the form via Ajax
+                    $.ajax({
+                        url: $(form).attr('action'),
+                        type: $(form).attr('method'),
+                        dataType: 'html',
+                        data: $(form).serialize(),
+                        success: function (result) {
+                            // Show success message
+                            $('.message-success').show();
+                            $('.message-success').html(result);
+                            // Reset the form
+                            $(form)[0].reset();
+                        },
+                        error: function() {
+                            // Show error message
+                            $('.message-warning').show();
+                        }
+                    });
+                    return false; // Prevent default form submission
+                }
             });
         });
     </script>

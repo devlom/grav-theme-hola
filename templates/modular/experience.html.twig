@@ -6,7 +6,7 @@
             <h3>{{ page.title }}</h3>
         </div>
         {% for item in page.header.experienceTimeline %}
-            <div class="col-six tab-full {% if item is odd %}left{% else %}right{% endif %}">
+            <div class="col-six tab-full {% if loop.index is odd %}left{% else %}right{% endif %}">
                 <div class="timeline">
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
